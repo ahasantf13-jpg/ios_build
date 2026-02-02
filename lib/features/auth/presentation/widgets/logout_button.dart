@@ -9,14 +9,14 @@ class SignOutButton extends StatelessWidget {
   const SignOutButton({super.key});
 
   Future<void> _logout(BuildContext context) async {
-    getIt<CacheHelper>().remove(ApiKey.access);
-    getIt<CacheHelper>().remove(ApiKey.refresh);
-    getIt<CacheHelper>().remove(ApiKey.userID);
-    getIt<CacheHelper>().remove(ApiKey.type);
+    await getIt<CacheHelper>().remove(ApiKey.access);
+    await getIt<CacheHelper>().remove(ApiKey.refresh);
+    await getIt<CacheHelper>().remove(ApiKey.userID);
+    await getIt<CacheHelper>().remove(ApiKey.type);
 
     if (context.mounted) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => AuthLayout()));
+      await Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const AuthLayout()));
     }
   }
 
@@ -50,7 +50,7 @@ class SignOutButton extends StatelessWidget {
 
     if (confirmed == true) {
       if (context.mounted) {
-        _logout(context);
+        await _logout(context);
       }
     }
   }

@@ -129,11 +129,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   SizedBox(height: 40.h),
                   Text(
                     subtitle,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w400,
                       fontSize: 20,
-                      color: const Color(0xFF393E46),
+                      color: Color(0xFF393E46),
                     ),
                   ),
                 ],

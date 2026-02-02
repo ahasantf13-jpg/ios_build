@@ -68,7 +68,7 @@ class _CreateOfferPageState extends State<CreateOfferPage> {
       endDay: _endDateController.text.trim(),
     );
 
-    context.read<OffersCubit>().createNewOffer(params);
+    await context.read<OffersCubit>().createNewOffer(params);
   }
 
   @override
@@ -91,50 +91,46 @@ class _CreateOfferPageState extends State<CreateOfferPage> {
         return CustomScaffold(
           safeTop: false,
           children: [
-            SizedBox(height: 20),
-            Text("Create New Offer", style: AppTextStyles.heading02ExtraBold),
-            SizedBox(height: 20),
-
+            const SizedBox(height: 20),
+            const Text("Create New Offer",
+                style: AppTextStyles.heading02ExtraBold),
+            const SizedBox(height: 20),
             AddImageWidget(
               title: "Offer Banner",
               selectedImage: _offerBanner,
               onPressed: _offerBanner == null ? _pickOfferBanner : null,
             ),
-            SizedBox(height: 16),
-
+            const SizedBox(height: 16),
             DateInputField(
               controller: _startDateController,
               label: "Start Date",
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             DateInputField(controller: _endDateController, label: "End Date"),
-            SizedBox(height: 16),
-
+            const SizedBox(height: 16),
             Categories(
               onSelected: (codes) {
                 setState(() => selectedCategories = codes);
               },
             ),
-
-            SizedBox(height: 30),
-
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: isLoading ? null : _submitOffer,
               style: isLoading
                   ? Theme.of(context).elevatedButtonTheme.style!.copyWith(
-                      backgroundColor: WidgetStateProperty.all(Colors.grey),
-                      padding: WidgetStateProperty.all(
-                        const EdgeInsets.symmetric(
-                          vertical: 12,
-                          horizontal: 20,
+                        backgroundColor: WidgetStateProperty.all(Colors.grey),
+                        padding: WidgetStateProperty.all(
+                          const EdgeInsets.symmetric(
+                            vertical: 12,
+                            horizontal: 20,
+                          ),
                         ),
-                      ),
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
-                      ),
-                    )
+                      )
                   : Theme.of(context).elevatedButtonTheme.style,
               child: isLoading
                   ? const SizedBox(

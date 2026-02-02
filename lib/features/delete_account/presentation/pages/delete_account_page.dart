@@ -66,7 +66,7 @@ class _DeleteAccountPageState extends State<DeleteAccountPage> {
 
           if (mounted) {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AuthLayout()));
+                context, MaterialPageRoute(builder: (context) => const AuthLayout()));
           }
         } else if (state is DeleteAccountFailed) {
           showDialog(
@@ -165,7 +165,7 @@ class _DeleteAccountPageState extends State<DeleteAccountPage> {
                     const SizedBox(height: 32),
 
                     isLoading
-                        ? Center(child: CircularProgressIndicator())
+                        ? const Center(child: CircularProgressIndicator())
                         : ElevatedButton.icon(
                             onPressed: _deleteAccount,
                             icon: const Icon(Icons.delete),

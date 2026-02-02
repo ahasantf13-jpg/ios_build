@@ -121,11 +121,11 @@ class _SignInPageState extends State<SignInPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Hello ! 👋🏻",
                             style: AppTextStyles.heading01SemiBold,
                           ),
-                          Text(
+                          const Text(
                             "Enter your account details to log in.",
                             style: AppTextStyles.paragraph02Regular,
                           ),
@@ -240,7 +240,7 @@ class _SignInPageState extends State<SignInPage> {
                                 final result = await signInWithGoogle();
 
                                 if (result != null && context.mounted) {
-                                  Navigator.pushAndRemoveUntil(
+                                  await Navigator.pushAndRemoveUntil(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>

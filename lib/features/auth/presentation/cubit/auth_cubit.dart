@@ -29,33 +29,33 @@ class AuthCubit extends Cubit<AuthStates> {
     failureOrLoggedInUser.fold(
       (failure) => emit(LoginUserFailed(errMessage: failure.errMessage)),
       (loggedInUser) async {
-        getIt<CacheHelper>().save(
+        await getIt<CacheHelper>().save(
           key: ApiKey.access,
           value: loggedInUser.access,
         );
 
-        getIt<CacheHelper>().save(
+        await getIt<CacheHelper>().save(
           key: ApiKey.refresh,
           value: loggedInUser.refresh,
         );
 
-        getIt<CacheHelper>().save(
+        await getIt<CacheHelper>().save(
           key: ApiKey.type,
           value: loggedInUser.user.type,
         );
 
-        getIt<CacheHelper>().save(
+        await getIt<CacheHelper>().save(
           key: ApiKey.userID,
           value: loggedInUser.user.id,
         );
 
-        getIt<CacheHelper>().save(
+        await getIt<CacheHelper>().save(
           key: ApiKey.userFullName,
           value: loggedInUser.user.fullName,
         );
 
         if (loggedInUser.user.profilePic != null) {
-          getIt<CacheHelper>().save(
+          await getIt<CacheHelper>().save(
             key: ApiKey.userProfileImage,
             value: loggedInUser.user.profilePic!,
           );

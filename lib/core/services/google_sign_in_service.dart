@@ -62,15 +62,16 @@ class GoogleAuthRepository {
 
     // Save tokens & user info
     final accessSaved =
-        getIt<CacheHelper>().save(key: ApiKey.access, value: accessToken);
-    getIt<CacheHelper>().save(key: ApiKey.refresh, value: refreshToken);
-    getIt<CacheHelper>().save(key: ApiKey.userID, value: user['id']);
-    getIt<CacheHelper>().save(key: ApiKey.type, value: "U");
-    getIt<CacheHelper>()
+        await getIt<CacheHelper>().save(key: ApiKey.access, value: accessToken);
+    await getIt<CacheHelper>().save(key: ApiKey.refresh, value: refreshToken);
+    await getIt<CacheHelper>().save(key: ApiKey.userID, value: user['id']);
+    await getIt<CacheHelper>().save(key: ApiKey.type, value: "U");
+    await getIt<CacheHelper>()
         .save(key: ApiKey.userFullName, value: user['fullname']);
-    getIt<CacheHelper>().save(key: ApiKey.userEmail, value: user['email']);
+    await getIt<CacheHelper>()
+        .save(key: ApiKey.userEmail, value: user['email']);
     if (user['profile_pic'] != null) {
-      getIt<CacheHelper>()
+      await getIt<CacheHelper>()
           .save(key: ApiKey.userProfileImage, value: user['profile_pic']);
     }
 

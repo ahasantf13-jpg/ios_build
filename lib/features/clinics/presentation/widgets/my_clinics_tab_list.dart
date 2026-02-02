@@ -33,14 +33,14 @@ class MyClinicsTabList extends StatelessWidget {
 
   Widget _buildContent(BuildContext context, ClinicsState state) {
     if (state is GetClinicsLoading) {
-      return SizedBox(
+      return const SizedBox(
         height: 130,
-        child: const Center(child: CircularProgressIndicator()),
+        child: Center(child: CircularProgressIndicator()),
       );
     }
 
     if (state is GetClinicsFailed) {
-      return SizedBox(
+      return const SizedBox(
         height: 130,
         child: Center(
           child: Text(
@@ -55,7 +55,7 @@ class MyClinicsTabList extends StatelessWidget {
       final clinics = state.clinics;
 
       if (clinics.isEmpty) {
-        return SizedBox(
+        return const SizedBox(
           height: 130,
           child: Center(child: Text("You don't have any clinics yet!")),
         );
@@ -72,9 +72,9 @@ class MyClinicsTabList extends StatelessWidget {
       );
     }
 
-    return SizedBox(
+    return const SizedBox(
       height: 130,
-      child: const Center(child: Text("An unexpected error occurred")),
+      child: Center(child: Text("An unexpected error occurred")),
     );
   }
 
@@ -230,7 +230,7 @@ class MyClinicsTabList extends StatelessWidget {
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(
+                                const Text(
                                   "Delete Confirmation",
                                   style: AppTextStyles.paragraph01SemiBold,
                                 ),

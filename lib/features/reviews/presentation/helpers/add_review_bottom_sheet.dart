@@ -76,7 +76,7 @@ BlocConsumer<ReviewsCubit, ReviewsStates> _content({
               SizedBox(height: 16.h),
               _header(context),
               SizedBox(height: 16.h),
-              RateSelector(),
+              const RateSelector(),
               SizedBox(height: 16.h),
               _yourReview(errorMessage: errorMessage, controller: controller),
               SizedBox(height: 44.h),
@@ -170,7 +170,7 @@ Column _yourReview({
         SizedBox(height: 8.h),
         Text(
           errorMessage,
-          style: TextStyle(color: AppColors.error12, fontSize: 14),
+          style: const TextStyle(color: AppColors.error12, fontSize: 14),
         ),
       ],
     ],

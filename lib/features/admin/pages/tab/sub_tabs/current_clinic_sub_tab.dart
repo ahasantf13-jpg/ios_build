@@ -165,7 +165,7 @@ class CurrentClinicSubTab extends StatelessWidget {
                                       clinicID: clinic.clinicId,
                                       actionStatus: "REJECTED",
                                     );
-                                    clinicsCubit
+                                    await clinicsCubit
                                         .adminApproveRejectClinic(params);
                                   }
                                 },

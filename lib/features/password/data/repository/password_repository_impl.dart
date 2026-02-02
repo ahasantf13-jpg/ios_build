@@ -25,7 +25,7 @@ class PasswordRepositoryImpl extends PasswordRepository {
   }) async {
     if (await networkInfo.isConnected) {
       try {
-        remoteDataSource.resetPassword(params);
+        await remoteDataSource.resetPassword(params);
 
         return Right(ResetPasswordEntity(detail: "Success"));
       } on ServerException catch (e) {
@@ -76,7 +76,7 @@ class PasswordRepositoryImpl extends PasswordRepository {
       try {
         await remoteDataSource.resetPasswordByPassword(params);
 
-        return Right(null);
+        return const Right(null);
       } on DioException catch (e) {
         return Left(Failure(errMessage: e.toString()));
       } on ServerException catch (e) {

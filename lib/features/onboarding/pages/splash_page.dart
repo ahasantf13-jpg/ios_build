@@ -26,7 +26,7 @@ class _SplashPageState extends State<SplashPage> {
 
     if (!mounted) return;
 
-    Navigator.pushReplacement(
+    await Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (_) => const OnboardingPage()),
     );

@@ -23,7 +23,7 @@ class AccountDetailsPage extends StatelessWidget {
     return BlocBuilder<AccountDetailsCubit, AccountDetailsStates>(
       builder: (context, state) {
         if (state is GetAccountDetailsLoading) {
-          return LoadingInterface();
+          return const LoadingInterface();
         }
 
         if (state is GetAccountDetailsFailure) {
@@ -38,7 +38,7 @@ class AccountDetailsPage extends StatelessWidget {
                   child: Text(
                     state.errMessage,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: AppColors.error12),
+                    style: const TextStyle(color: AppColors.error12),
                   ),
                 ),
               ),
@@ -75,7 +75,7 @@ class AccountDetailsPage extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => BlocProvider(
                                       create: (context) => DeleteAccountCubit(),
-                                      child: DeleteAccountPage(),
+                                      child: const DeleteAccountPage(),
                                     )));
                       },
                       icon: const Icon(Icons.delete),
@@ -113,7 +113,7 @@ class AccountDetailsPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Profile Info", style: AppTextStyles.paragraph02SemiBold),
+          const Text("Profile Info", style: AppTextStyles.paragraph02SemiBold),
           SizedBox(height: 16.h),
           _infoOption(context, Icons.person, user.name),
           SizedBox(height: 16.h),
@@ -203,7 +203,7 @@ class AccountDetailsPage extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      title: Text("Account Details", style: AppTextStyles.paragraph02SemiBold),
+      title: const Text("Account Details", style: AppTextStyles.paragraph02SemiBold),
       actions: [
         GestureDetector(
           onTap: () {
