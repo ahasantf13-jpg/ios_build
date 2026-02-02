@@ -47,6 +47,8 @@
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
 		<key>UIStatusBarHidden</key>
+		<key>NSPhotoLibraryUsageDescription</key>
+			<string>نحتاج الوصول إلى الصور لاختيار صورة البروفايل الخاصة بك.</string>
 		<false/>
 	</dict>
 </plist>

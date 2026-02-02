@@ -100,7 +100,7 @@ class ReviewsFromOthers extends StatelessWidget {
                       height: 64,
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) => Image.asset(
-                        AppAssets.comingSoonBanner,
+                        AppAssets.userPlaceHolder,
                         width: 64,
                         height: 64,
                         fit: BoxFit.cover,

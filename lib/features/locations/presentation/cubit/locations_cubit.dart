@@ -33,7 +33,7 @@ class LocationsCubit extends Cubit<LocationsStates> {
 
     failureOrLocations.fold(
       (failure) => emit(GetAllLocationsFailed(errMessage: failure.errMessage)),
-      (locations) async {
+      (locations) {
         emit(GetAllLocationsSuccessfully(location: locations));
 
         final defaultList = locations.where((loc) => loc.isDefault == true);
@@ -41,7 +41,7 @@ class LocationsCubit extends Cubit<LocationsStates> {
         if (defaultList.isNotEmpty) {
           final defaultLocation = defaultList.first;
 
-          await getIt<CacheHelper>().save(
+          getIt<CacheHelper>().save(
             key: ApiKey.mainLocation,
             value: defaultLocation.address,
           );

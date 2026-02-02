@@ -113,14 +113,12 @@ class TopRatedClinics extends StatelessWidget {
 
   Widget _clinicCard(BuildContext context, ClinicEntity clinic) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ClinicDetailsPage(clinic: clinic),
-          ),
-        );
-      },
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ClinicDetailsPage(clinic: clinic),
+        ),
+      ),
       child: Container(
         padding: const EdgeInsets.all(8),
         width: 300,
@@ -165,7 +163,8 @@ class TopRatedClinics extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 7.5),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 4, vertical: 7.5),
                     decoration: BoxDecoration(
                       color: AppColors.secondary01,
                       borderRadius: BorderRadius.circular(1000),
