@@ -44,7 +44,7 @@ class MyClinicsTabList extends StatelessWidget {
         height: 130,
         child: Center(
           child: Text(
-            "Couldn't fetch clinics!\nPlease restart the app",
+            "Couldn't fetch clinics!\nPull to refresh",
             textAlign: TextAlign.center,
           ),
         ),
@@ -147,7 +147,6 @@ class MyClinicsTabList extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 4),
-
                   Text(
                     clinic.clinicName,
                     style: AppTextStyles.paragraph01SemiBold.copyWith(
@@ -155,13 +154,11 @@ class MyClinicsTabList extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 4),
-
                   Text(
                     clinic.clinicDescription,
                     style: AppTextStyles.captionRegular.copyWith(fontSize: 12),
                   ),
                   const SizedBox(height: 4),
-
                   Row(
                     children: [
                       const Icon(
@@ -270,8 +267,8 @@ class MyClinicsTabList extends StatelessWidget {
                                               style: AppTextStyles
                                                   .paragraph02Regular
                                                   .copyWith(
-                                                    color: Colors.white,
-                                                  ),
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -303,8 +300,8 @@ class MyClinicsTabList extends StatelessWidget {
                                               style: AppTextStyles
                                                   .paragraph02Regular
                                                   .copyWith(
-                                                    color: AppColors.primary05,
-                                                  ),
+                                                color: AppColors.primary05,
+                                              ),
                                             ),
                                           ),
                                         ),

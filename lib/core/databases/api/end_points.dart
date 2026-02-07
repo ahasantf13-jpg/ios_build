@@ -1,5 +1,6 @@
 class EndPoints {
-  static const String baseUrl = "Https://glowguide.ae/";
+  // normalized base URL (lowercase scheme, include trailing slash)
+  static const String baseUrl = 'https://glowguide.ae/';
 
   static const String accountDetails = "user/profile/";
   static const String login = "user/login/";

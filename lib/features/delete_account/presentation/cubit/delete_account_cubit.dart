@@ -1,9 +1,9 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glowguide/core/connections/network_info.dart';
 import 'package:glowguide/core/databases/api/dio_consumer.dart';
 import 'package:glowguide/core/params/params.dart';
+import 'package:glowguide/core/services/service_locator.dart';
 import 'package:glowguide/features/delete_account/data/repos/delete_account_repository_impl.dart';
 import 'package:glowguide/features/delete_account/data/source/delete_account_remote_data_source.dart';
 import 'package:glowguide/features/delete_account/domain/usecases/delete_account_usecase.dart';
@@ -17,7 +17,7 @@ class DeleteAccountCubit extends Cubit<DeleteAccountState> {
 
     final result = await DeleteAccountUsecase(
       repository: DeleteAccountRepositoryImpl(
-        networkInfo: NetworkInfoImpl(Connectivity()),
+        networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: DeleteAccountRemoteDataSource(
           api: DioConsumer(dio: Dio()),
         ),

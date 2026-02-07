@@ -60,40 +60,55 @@ class UnknownException extends ServerException {
 }
 
 void handleDioException(DioException e) {
+  ErrorModel errorModelFromResponse() {
+    final data = e.response?.data;
+    try {
+      if (data == null) {
+        return ErrorModel(errorMessage: e.message ?? e.toString());
+      }
+      if (data is String) return ErrorModel(errorMessage: data);
+      return ErrorModel.fromJson(data);
+    } catch (_) {
+      return ErrorModel(errorMessage: e.message ?? e.toString());
+    }
+  }
+
   switch (e.type) {
     case DioExceptionType.connectionError:
-      throw ConnectionErrorException(ErrorModel.fromJson(e.response!.data));
+      throw ConnectionErrorException(errorModelFromResponse());
     case DioExceptionType.badCertificate:
-      throw BadCertificateException(ErrorModel.fromJson(e.response!.data));
+      throw BadCertificateException(errorModelFromResponse());
     case DioExceptionType.connectionTimeout:
-      throw ConnectionTimeoutException(ErrorModel.fromJson(e.response!.data));
+      throw ConnectionTimeoutException(errorModelFromResponse());
 
     case DioExceptionType.receiveTimeout:
-      throw ReceiveTimeoutException(ErrorModel.fromJson(e.response!.data));
+      throw ReceiveTimeoutException(errorModelFromResponse());
 
     case DioExceptionType.sendTimeout:
-      throw SendTimeoutException(ErrorModel.fromJson(e.response!.data));
+      throw SendTimeoutException(errorModelFromResponse());
 
     case DioExceptionType.badResponse:
       switch (e.response?.statusCode) {
         case 400:
-          throw BadResponseException(ErrorModel.fromJson(e.response!.data));
+          throw BadResponseException(errorModelFromResponse());
 
         case 401:
-          throw UnauthorizedException(ErrorModel.fromJson(e.response!.data));
+          throw UnauthorizedException(errorModelFromResponse());
 
         case 403:
-          throw ForbiddenException(ErrorModel.fromJson(e.response!.data));
+          throw ForbiddenException(errorModelFromResponse());
 
         case 404:
-          throw NotFoundException(ErrorModel.fromJson(e.response!.data));
+          throw NotFoundException(errorModelFromResponse());
 
         case 409:
-          throw CofficientException(ErrorModel.fromJson(e.response!.data));
+          throw CofficientException(errorModelFromResponse());
 
         case 504:
           throw BadResponseException(
-            ErrorModel(errorMessage: e.response!.data),
+            ErrorModel(
+                errorMessage:
+                    e.response?.data?.toString() ?? e.message ?? e.toString()),
           );
       }
 

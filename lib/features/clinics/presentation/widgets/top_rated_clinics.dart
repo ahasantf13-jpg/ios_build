@@ -37,7 +37,7 @@ class TopRatedClinics extends StatelessWidget {
           return const SizedBox(
             height: 130,
             child: Center(
-              child: Text("Couldn't fetch clinics!\nPlease restart the app"),
+              child: Text("Couldn't fetch clinics!\nPull to refresh"),
             ),
           );
         }

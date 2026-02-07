@@ -10,7 +10,7 @@ import 'package:glowguide/features/offers/domain/usecases/admin_approve_reject_o
 import 'package:glowguide/features/offers/domain/usecases/create_new_offer_usecase.dart';
 import 'package:glowguide/features/offers/domain/usecases/get_all_offers_usecase.dart';
 import 'package:glowguide/features/offers/presentation/cubit/offer_states.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,7 +22,7 @@ class OffersCubit extends Cubit<OfferStates> {
 
     final failureOrCreatedOffer = await CreateNewOfferUsecase(
       repository: OffersRepositoryImpl(
-        networkInfo: NetworkInfoImpl(Connectivity()),
+        networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: OffersRemoteDataSource(api: DioConsumer(dio: Dio())),
         localDataSource: OffersLocalDataSource(cache: getIt<CacheHelper>()),
       ),
@@ -39,7 +39,7 @@ class OffersCubit extends Cubit<OfferStates> {
 
     final failureOrGetOffers = await GetAllOffersUsecase(
       repository: OffersRepositoryImpl(
-        networkInfo: NetworkInfoImpl(Connectivity()),
+        networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: OffersRemoteDataSource(api: DioConsumer(dio: Dio())),
         localDataSource: OffersLocalDataSource(cache: getIt<CacheHelper>()),
       ),
@@ -62,7 +62,7 @@ class OffersCubit extends Cubit<OfferStates> {
 
     final failureOrApprovedRejected = await AdminApproveRejectOffersUsecase(
       repository: OffersRepositoryImpl(
-        networkInfo: NetworkInfoImpl(Connectivity()),
+        networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: OffersRemoteDataSource(api: DioConsumer(dio: Dio())),
         localDataSource: OffersLocalDataSource(cache: getIt<CacheHelper>()),
       ),

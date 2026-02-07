@@ -24,7 +24,7 @@ class ReviewsFromOthers extends StatelessWidget {
 
         if (state is GetAllReviewsFailed) {
           return const Center(
-            child: Text("Couldn't fetch reviews!\nPlease restart the app"),
+            child: Text("Couldn't fetch reviews!\nPull to refresh"),
           );
         }
 

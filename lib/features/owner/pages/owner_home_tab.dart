@@ -122,7 +122,8 @@ class _OwnerHomeTabState extends State<OwnerHomeTab> {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
-          child: const Text("My Clinics", style: AppTextStyles.paragraph02SemiBold),
+          child: const Text("My Clinics",
+              style: AppTextStyles.paragraph02SemiBold),
         ),
         BlocBuilder<ClinicsCubit, ClinicsState>(
           builder: (context, state) {
@@ -138,7 +139,7 @@ class _OwnerHomeTabState extends State<OwnerHomeTab> {
                 height: 130,
                 child: Center(
                   child: Text(
-                    "Couldn't fetch your clinics!\nPlease restart the app",
+                    "Couldn't fetch your clinics!\nPull to refresh",
                   ),
                 ),
               );
