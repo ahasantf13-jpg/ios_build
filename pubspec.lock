@@ -656,14 +656,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.10.0"
-  json_rpc_2:
-    dependency: "direct main"
-    description:
-      name: json_rpc_2
-      sha256: "3c46c2633aec07810c3d6a2eb08d575b5b4072980db08f1344e66aeb53d6e4a7"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -793,7 +785,7 @@ packages:
     source: hosted
     version: "2.2.0"
   path:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path
       sha256: "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5"
@@ -1022,7 +1014,7 @@ packages:
     source: hosted
     version: "1.10.2"
   stack_trace:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: stack_trace
       sha256: "8b27215b45d22309b5cddda1aa2b19bdfec9df0e765f2de506401c071d38d1b1"
