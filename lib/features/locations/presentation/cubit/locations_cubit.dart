@@ -11,8 +11,6 @@ import 'package:glowguide/features/locations/domain/usecases/add_new_location_us
 import 'package:glowguide/features/locations/domain/usecases/delete_location_usecase.dart';
 import 'package:glowguide/features/locations/domain/usecases/get_all_locations_usecase.dart';
 import 'package:glowguide/features/locations/presentation/cubit/locations_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LocationsCubit extends Cubit<LocationsStates> {
@@ -25,7 +23,7 @@ class LocationsCubit extends Cubit<LocationsStates> {
       repository: LocationsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: LocationsRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
         localDataSource: LocationsLocalDataSource(cache: getIt<CacheHelper>()),
       ),
@@ -57,7 +55,7 @@ class LocationsCubit extends Cubit<LocationsStates> {
             repository: LocationsRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
                 remoteDataSource:
-                    LocationsRemoteDataSource(api: DioConsumer(dio: Dio())),
+                    LocationsRemoteDataSource(api: getIt<DioConsumer>()),
                 localDataSource:
                     LocationsLocalDataSource(cache: getIt<CacheHelper>())))
         .call(params: params);
@@ -74,7 +72,7 @@ class LocationsCubit extends Cubit<LocationsStates> {
             repository: LocationsRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
                 remoteDataSource:
-                    LocationsRemoteDataSource(api: DioConsumer(dio: Dio())),
+                    LocationsRemoteDataSource(api: getIt<DioConsumer>()),
                 localDataSource:
                     LocationsLocalDataSource(cache: getIt<CacheHelper>())))
         .call(params: params);

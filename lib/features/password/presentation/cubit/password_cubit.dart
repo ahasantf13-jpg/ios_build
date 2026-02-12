@@ -9,8 +9,6 @@ import 'package:glowguide/features/password/domain/usecase/reset_password_by_pas
 import 'package:glowguide/features/password/domain/usecase/reset_password_usecase.dart';
 import 'package:glowguide/features/password/domain/usecase/set_new_password_usecase.dart';
 import 'package:glowguide/features/password/presentation/cubit/password_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PasswordCubit extends Cubit<PasswordStates> {
@@ -23,7 +21,7 @@ class PasswordCubit extends Cubit<PasswordStates> {
       repository: PasswordRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: PasswordRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
       ),
     ).call(params: params);
@@ -41,7 +39,7 @@ class PasswordCubit extends Cubit<PasswordStates> {
             repository: PasswordRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
                 remoteDataSource:
-                    PasswordRemoteDataSource(api: DioConsumer(dio: Dio()))))
+                    PasswordRemoteDataSource(api: getIt<DioConsumer>())))
         .call(params: params);
 
     failureOrConfirmed.fold(
@@ -56,7 +54,7 @@ class PasswordCubit extends Cubit<PasswordStates> {
             repository: PasswordRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
                 remoteDataSource:
-                    PasswordRemoteDataSource(api: DioConsumer(dio: Dio()))))
+                    PasswordRemoteDataSource(api: getIt<DioConsumer>())))
         .call(params: params);
 
     failureOrSetNew.fold(
@@ -72,7 +70,7 @@ class PasswordCubit extends Cubit<PasswordStates> {
             repository: PasswordRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
                 remoteDataSource:
-                    PasswordRemoteDataSource(api: DioConsumer(dio: Dio()))))
+                    PasswordRemoteDataSource(api: getIt<DioConsumer>())))
         .call(params: params);
 
     failureOrNewPass.fold(

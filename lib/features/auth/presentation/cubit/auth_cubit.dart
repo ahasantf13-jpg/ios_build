@@ -9,8 +9,6 @@ import 'package:glowguide/features/auth/data/source/auth_remote_data_source.dart
 import 'package:glowguide/features/auth/domain/usecases/login_user_usecase.dart';
 import 'package:glowguide/features/auth/domain/usecases/sign_up_clinic_owner_usecase.dart';
 import 'package:glowguide/features/auth/presentation/cubit/auth_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthCubit extends Cubit<AuthStates> {
@@ -22,7 +20,7 @@ class AuthCubit extends Cubit<AuthStates> {
     final failureOrLoggedInUser = await LoginUserUsecase(
       repository: AuthRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: AuthRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: AuthRemoteDataSource(api: getIt<DioConsumer>()),
       ),
     ).call(params: params);
 
@@ -72,7 +70,7 @@ class AuthCubit extends Cubit<AuthStates> {
     final failureOrSignupClinicOwner = await SignUpClinicOwnerUsecase(
       repository: AuthRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: AuthRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: AuthRemoteDataSource(api: getIt<DioConsumer>()),
       ),
     ).call(params: params);
 

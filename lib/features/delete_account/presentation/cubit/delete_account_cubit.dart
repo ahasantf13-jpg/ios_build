@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glowguide/core/connections/network_info.dart';
 import 'package:glowguide/core/databases/api/dio_consumer.dart';
@@ -19,7 +18,7 @@ class DeleteAccountCubit extends Cubit<DeleteAccountState> {
       repository: DeleteAccountRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: DeleteAccountRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
       ),
     ).call(params: params);

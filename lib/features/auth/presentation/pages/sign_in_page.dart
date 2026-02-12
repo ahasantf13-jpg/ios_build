@@ -79,7 +79,7 @@ class _SignInPageState extends State<SignInPage> {
         final isEmailLoading = state is LoginUserLoading;
 
         // final googleService = GoogleSignInService();
-        // final api = DioConsumer(dio: Dio());
+        // final api = getIt<DioConsumer>();
         // final repo = GoogleAuthRepository(GoogleAuthRemoteDataSource(api));
 
         // Future<Map<String, dynamic>?> signInWithGoogle() async {

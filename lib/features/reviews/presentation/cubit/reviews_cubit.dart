@@ -10,7 +10,6 @@ import 'package:glowguide/features/reviews/domain/usecase/get_all_reviews_usecas
 import 'package:glowguide/features/reviews/domain/usecase/write_a_review_usecase.dart';
 import 'package:glowguide/features/reviews/presentation/cubit/reviews_states.dart';
 import 'package:glowguide/core/services/service_locator.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ReviewsCubit extends Cubit<ReviewsStates> {
@@ -22,7 +21,7 @@ class ReviewsCubit extends Cubit<ReviewsStates> {
     final failureOrGetReviews = await GetAllReviewsUsecase(
       repository: ReviewsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: ReviewsRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: ReviewsRemoteDataSource(api: getIt<DioConsumer>()),
         localDataSource: ReviewsLocalDataSource(cache: getIt<CacheHelper>()),
       ),
     ).call();
@@ -39,7 +38,7 @@ class ReviewsCubit extends Cubit<ReviewsStates> {
     final failureOrWriteReview = await WriteAReviewUsecase(
       repository: ReviewsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: ReviewsRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: ReviewsRemoteDataSource(api: getIt<DioConsumer>()),
         localDataSource: ReviewsLocalDataSource(cache: getIt<CacheHelper>()),
       ),
     ).call(params: params);
@@ -58,7 +57,7 @@ class ReviewsCubit extends Cubit<ReviewsStates> {
     final response = await AdminApproveRejectReviewUsecase(
       repository: ReviewsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: ReviewsRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: ReviewsRemoteDataSource(api: getIt<DioConsumer>()),
         localDataSource: ReviewsLocalDataSource(cache: getIt<CacheHelper>()),
       ),
     ).call(params: params);

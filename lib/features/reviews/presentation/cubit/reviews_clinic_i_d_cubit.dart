@@ -8,8 +8,6 @@ import 'package:glowguide/features/reviews/data/source/reviews_local_data_source
 import 'package:glowguide/features/reviews/data/source/reviews_remote_data_source.dart';
 import 'package:glowguide/features/reviews/domain/usecase/get_reviews_by_clinic_i_d_usecase.dart';
 import 'package:glowguide/features/reviews/presentation/cubit/reviews_clinic_i_d_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ReviewsClinicIDCubit extends Cubit<ReviewsClinicIDStates> {
@@ -23,7 +21,7 @@ class ReviewsClinicIDCubit extends Cubit<ReviewsClinicIDStates> {
     final failureOrGetReviews = await GetReviewsByClinicIDUsecase(
       repository: ReviewsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
-        remoteDataSource: ReviewsRemoteDataSource(api: DioConsumer(dio: Dio())),
+        remoteDataSource: ReviewsRemoteDataSource(api: getIt<DioConsumer>()),
         localDataSource: ReviewsLocalDataSource(cache: getIt<CacheHelper>()),
       ),
     ).call(params: params);

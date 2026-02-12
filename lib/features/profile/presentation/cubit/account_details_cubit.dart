@@ -9,8 +9,6 @@ import 'package:glowguide/features/profile/data/sources/account_details_remote_d
 import 'package:glowguide/features/profile/domain/usecase/get_account_details_usecase.dart';
 import 'package:glowguide/features/profile/domain/usecase/update_profile_usecase.dart';
 import 'package:glowguide/features/profile/presentation/cubit/account_details_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AccountDetailsCubit extends Cubit<AccountDetailsStates> {
@@ -23,7 +21,7 @@ class AccountDetailsCubit extends Cubit<AccountDetailsStates> {
       repository: AccountDetailsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: AccountDetailsRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
         localDataSource:
             AccountDetailsLocalDataSource(cache: getIt<CacheHelper>()),
@@ -43,8 +41,8 @@ class AccountDetailsCubit extends Cubit<AccountDetailsStates> {
     final failureOrUpdated = await UpdateProfileUsecase(
             repository: AccountDetailsRepositoryImpl(
                 networkInfo: getIt<NetworkInfo>(),
-                remoteDataSource: AccountDetailsRemoteDataSource(
-                    api: DioConsumer(dio: Dio())),
+                remoteDataSource:
+                    AccountDetailsRemoteDataSource(api: getIt<DioConsumer>()),
                 localDataSource:
                     AccountDetailsLocalDataSource(cache: getIt<CacheHelper>())))
         .call(params: params!);

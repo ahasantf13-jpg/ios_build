@@ -9,8 +9,6 @@ import 'package:glowguide/features/notifications/data/source/notifications_remot
 import 'package:glowguide/features/notifications/domain/usecase/get_notifications_usecase.dart';
 import 'package:glowguide/features/notifications/domain/usecase/post_notification.dart';
 import 'package:glowguide/features/notifications/presentation/cubit/notifications_states.dart';
-
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NotificationsCubit extends Cubit<NotificationsStates> {
@@ -23,7 +21,7 @@ class NotificationsCubit extends Cubit<NotificationsStates> {
       repository: NotificationsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: NotificationsRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
         localDataSource:
             NotificationsLocalDataSource(cache: getIt<CacheHelper>()),
@@ -45,7 +43,7 @@ class NotificationsCubit extends Cubit<NotificationsStates> {
       repository: NotificationsRepositoryImpl(
         networkInfo: getIt<NetworkInfo>(),
         remoteDataSource: NotificationsRemoteDataSource(
-          api: DioConsumer(dio: Dio()),
+          api: getIt<DioConsumer>(),
         ),
         localDataSource:
             NotificationsLocalDataSource(cache: getIt<CacheHelper>()),
