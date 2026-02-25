@@ -1,7 +1,7 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/locations/presentation/pages/user_add_location_page.dart';
-import 'package:glowguide/features/locations/presentation/widgets/user_current_locations.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/locations/presentation/pages/user_add_location_page.dart';
+import 'package:beautygm/features/locations/presentation/widgets/user_current_locations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -33,7 +33,6 @@ Future<void> showLocationBottomSheet(BuildContext context) {
                 ),
               ),
               SizedBox(height: 16.h),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -65,9 +64,7 @@ Future<void> showLocationBottomSheet(BuildContext context) {
                 ],
               ),
               SizedBox(height: 16.h),
-
               const UserCurrentLocations(),
-
               SizedBox(height: 44.h),
               ElevatedButton(
                 onPressed: () {

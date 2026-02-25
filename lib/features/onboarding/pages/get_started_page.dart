@@ -1,8 +1,8 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/auth/presentation/pages/sign_in_page.dart';
-import 'package:glowguide/features/auth/presentation/pages/choose_role_page.dart';
-import 'package:glowguide/features/onboarding/widgets/or_divider.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:beautygm/features/auth/presentation/pages/choose_role_page.dart';
+import 'package:beautygm/features/onboarding/widgets/or_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -133,28 +133,26 @@ class _GetStartedPageState extends State<GetStartedPage>
                                 ),
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) {
-                                      return const SignInPage();
-                                    },
-                                transitionsBuilder:
-                                    (
-                                      context,
-                                      animation,
-                                      secondaryAnimation,
-                                      child,
-                                    ) {
-                                      final tween =
-                                          Tween(
-                                            begin: const Offset(1.0, 0.0),
-                                            end: Offset.zero,
-                                          ).chain(
-                                            CurveTween(curve: Curves.easeInOut),
-                                          );
+                                  return const SignInPage();
+                                },
+                                transitionsBuilder: (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) {
+                                  final tween = Tween(
+                                    begin: const Offset(1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).chain(
+                                    CurveTween(curve: Curves.easeInOut),
+                                  );
 
-                                      return SlideTransition(
-                                        position: animation.drive(tween),
-                                        child: child,
-                                      );
-                                    },
+                                  return SlideTransition(
+                                    position: animation.drive(tween),
+                                    child: child,
+                                  );
+                                },
                               ),
                             );
                           },
@@ -177,26 +175,24 @@ class _GetStartedPageState extends State<GetStartedPage>
                                 pageBuilder:
                                     (context, animation, secondaryAnimation) =>
                                         const ChooseRolePage(),
-                                transitionsBuilder:
-                                    (
-                                      context,
-                                      animation,
-                                      secondaryAnimation,
-                                      child,
-                                    ) {
-                                      final tween =
-                                          Tween(
-                                            begin: const Offset(1.0, 0.0),
-                                            end: Offset.zero,
-                                          ).chain(
-                                            CurveTween(curve: Curves.easeInOut),
-                                          );
+                                transitionsBuilder: (
+                                  context,
+                                  animation,
+                                  secondaryAnimation,
+                                  child,
+                                ) {
+                                  final tween = Tween(
+                                    begin: const Offset(1.0, 0.0),
+                                    end: Offset.zero,
+                                  ).chain(
+                                    CurveTween(curve: Curves.easeInOut),
+                                  );
 
-                                      return SlideTransition(
-                                        position: animation.drive(tween),
-                                        child: child,
-                                      );
-                                    },
+                                  return SlideTransition(
+                                    position: animation.drive(tween),
+                                    child: child,
+                                  );
+                                },
                               ),
                             );
                           },

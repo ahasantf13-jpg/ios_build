@@ -1,9 +1,9 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:glowguide/core/layouts/auth_layout.dart';
-import 'package:glowguide/core/services/service_locator.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/core/services/service_locator.dart';
 
 class SignOutButton extends StatelessWidget {
   const SignOutButton({super.key});

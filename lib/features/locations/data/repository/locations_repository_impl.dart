@@ -1,12 +1,12 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/errors/exceptions/app_exceptions.dart';
-import 'package:glowguide/core/errors/exceptions/cache_exceptions.dart';
-import 'package:glowguide/core/errors/models/failure.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/features/locations/data/source/locations_local_data_source.dart';
-import 'package:glowguide/features/locations/data/source/locations_remote_data_source.dart';
-import 'package:glowguide/features/locations/domain/entities/location_entity.dart';
-import 'package:glowguide/features/locations/domain/repositories/locations_repository.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/errors/exceptions/app_exceptions.dart';
+import 'package:beautygm/core/errors/exceptions/cache_exceptions.dart';
+import 'package:beautygm/core/errors/models/failure.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/features/locations/data/source/locations_local_data_source.dart';
+import 'package:beautygm/features/locations/data/source/locations_remote_data_source.dart';
+import 'package:beautygm/features/locations/domain/entities/location_entity.dart';
+import 'package:beautygm/features/locations/domain/repositories/locations_repository.dart';
 import 'package:dartz/dartz.dart';
 
 class LocationsRepositoryImpl extends LocationsRepository {

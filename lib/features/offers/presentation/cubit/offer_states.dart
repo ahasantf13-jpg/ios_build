@@ -1,4 +1,4 @@
-import 'package:glowguide/features/offers/domain/entities/get_all_offers_entities.dart';
+import 'package:beautygm/features/offers/domain/entities/get_all_offers_entities.dart';
 
 abstract class OfferStates {}
 

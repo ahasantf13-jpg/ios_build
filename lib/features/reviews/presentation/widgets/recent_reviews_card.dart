@@ -1,9 +1,9 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/clinics/presentation/pages/clinic_details_page.dart';
-import 'package:glowguide/features/reviews/domain/entities/reviews_entity.dart';
-import 'package:glowguide/features/reviews/presentation/cubit/reviews_cubit.dart';
-import 'package:glowguide/features/reviews/presentation/cubit/reviews_states.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/clinics/presentation/pages/clinic_details_page.dart';
+import 'package:beautygm/features/reviews/domain/entities/reviews_entity.dart';
+import 'package:beautygm/features/reviews/presentation/cubit/reviews_cubit.dart';
+import 'package:beautygm/features/reviews/presentation/cubit/reviews_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

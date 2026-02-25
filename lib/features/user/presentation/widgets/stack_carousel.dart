@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offer_states.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offers_cubit.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offer_states.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offers_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

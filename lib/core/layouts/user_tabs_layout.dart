@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/profile/presentation/pages/my_profile_tab.dart';
-import 'package:glowguide/features/user/presentation/pages/user_favorites_tab.dart';
-import 'package:glowguide/features/user/presentation/pages/user_home_tab.dart';
-import 'package:glowguide/features/user/presentation/pages/user_offers_tab.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/profile/presentation/pages/my_profile_tab.dart';
+import 'package:beautygm/features/user/presentation/pages/user_favorites_tab.dart';
+import 'package:beautygm/features/user/presentation/pages/user_home_tab.dart';
+import 'package:beautygm/features/user/presentation/pages/user_offers_tab.dart';
 
 class UserTabsLayout extends StatefulWidget {
   const UserTabsLayout({super.key});

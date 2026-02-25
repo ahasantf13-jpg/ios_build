@@ -1,16 +1,16 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/core/widgets/loading_interface.dart';
-import 'package:glowguide/features/delete_account/presentation/cubit/delete_account_cubit.dart';
-import 'package:glowguide/features/delete_account/presentation/pages/delete_account_page.dart';
-import 'package:glowguide/features/profile/domain/entities/account_details_entity.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_cubit.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_states.dart';
-import 'package:glowguide/features/profile/presentation/pages/edite_profile_details.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/core/widgets/loading_interface.dart';
+import 'package:beautygm/features/delete_account/presentation/cubit/delete_account_cubit.dart';
+import 'package:beautygm/features/delete_account/presentation/pages/delete_account_page.dart';
+import 'package:beautygm/features/profile/domain/entities/account_details_entity.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_cubit.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_states.dart';
+import 'package:beautygm/features/profile/presentation/pages/edite_profile_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -125,8 +125,6 @@ class AccountDetailsPage extends StatelessWidget {
             user.phoneNumber.isEmpty ? "Not Set" : user.phoneNumber,
           ),
           SizedBox(height: 16.h),
-          _infoOption(context, Icons.male, _formatGender(user.gender)),
-          SizedBox(height: 16.h),
           _infoOption(
             context,
             Icons.calendar_month_outlined,
@@ -152,8 +150,6 @@ class AccountDetailsPage extends StatelessWidget {
       ],
     );
   }
-
-  String _formatGender(bool isMale) => isMale ? "Male" : "Female";
 
   String _formatBirthday(String? date) {
     if (date == null || date.isEmpty) return "Not set";
@@ -203,7 +199,8 @@ class AccountDetailsPage extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      title: const Text("Account Details", style: AppTextStyles.paragraph02SemiBold),
+      title: const Text("Account Details",
+          style: AppTextStyles.paragraph02SemiBold),
       actions: [
         GestureDetector(
           onTap: () {

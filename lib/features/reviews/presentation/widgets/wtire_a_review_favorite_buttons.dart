@@ -1,8 +1,8 @@
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/clinics/domain/entities/clinic_entity.dart';
-import 'package:glowguide/features/favorites/data/models/clinic_hive_model.dart';
-import 'package:glowguide/features/favorites/data/services/favorites_services.dart';
-import 'package:glowguide/features/reviews/presentation/helpers/add_review_bottom_sheet.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
+import 'package:beautygm/features/favorites/data/models/clinic_hive_model.dart';
+import 'package:beautygm/features/favorites/data/services/favorites_services.dart';
+import 'package:beautygm/features/reviews/presentation/helpers/add_review_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

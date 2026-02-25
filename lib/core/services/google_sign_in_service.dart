@@ -1,8 +1,8 @@
 // import 'package:flutter/widgets.dart';
-// import 'package:glowguide/core/databases/api/api_consumer.dart';
-// import 'package:glowguide/core/databases/api/end_points.dart';
-// import 'package:glowguide/core/databases/cache/cache_helper.dart';
-// import 'package:glowguide/core/services/service_locator.dart';
+// import 'package:beautygm/core/databases/api/api_consumer.dart';
+// import 'package:beautygm/core/databases/api/end_points.dart';
+// import 'package:beautygm/core/databases/cache/cache_helper.dart';
+// import 'package:beautygm/core/services/service_locator.dart';
 // import 'package:google_sign_in/google_sign_in.dart';
 
 // class GoogleSignInService {

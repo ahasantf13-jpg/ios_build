@@ -1,4 +1,4 @@
-import 'package:glowguide/features/reviews/domain/entities/reviews_entity.dart';
+import 'package:beautygm/features/reviews/domain/entities/reviews_entity.dart';
 
 abstract class ReviewsStates {}
 

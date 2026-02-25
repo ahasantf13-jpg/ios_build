@@ -1,4 +1,4 @@
-import 'package:glowguide/features/notifications/domain/entities/post_notificaiton_entity.dart';
+import 'package:beautygm/features/notifications/domain/entities/post_notificaiton_entity.dart';
 
 class PostNotificationModel extends PostNotificaitonEntity {
   final String recipientId;

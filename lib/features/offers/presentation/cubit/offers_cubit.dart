@@ -1,15 +1,15 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/offers/data/repository/offers_repository_impl.dart';
-import 'package:glowguide/features/offers/data/source/offers_local_data_source.dart';
-import 'package:glowguide/features/offers/data/source/offers_remote_data_source.dart';
-import 'package:glowguide/features/offers/domain/usecases/admin_approve_reject_offers_usecase.dart';
-import 'package:glowguide/features/offers/domain/usecases/create_new_offer_usecase.dart';
-import 'package:glowguide/features/offers/domain/usecases/get_all_offers_usecase.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offer_states.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/offers/data/repository/offers_repository_impl.dart';
+import 'package:beautygm/features/offers/data/source/offers_local_data_source.dart';
+import 'package:beautygm/features/offers/data/source/offers_remote_data_source.dart';
+import 'package:beautygm/features/offers/domain/usecases/admin_approve_reject_offers_usecase.dart';
+import 'package:beautygm/features/offers/domain/usecases/create_new_offer_usecase.dart';
+import 'package:beautygm/features/offers/domain/usecases/get_all_offers_usecase.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offer_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OffersCubit extends Cubit<OfferStates> {

@@ -1,6 +1,6 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/clinics/domain/entities/clinic_entity.dart';
-import 'package:glowguide/features/reviews/presentation/widgets/wtire_a_review_favorite_buttons.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
+import 'package:beautygm/features/reviews/presentation/widgets/wtire_a_review_favorite_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -32,7 +32,8 @@ class DetailsTab extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Who are we !?", style: AppTextStyles.paragraph01SemiBold),
+            const Text("Who are we !?",
+                style: AppTextStyles.paragraph01SemiBold),
             SizedBox(height: 8.h),
             Text(
               clinic.clinicWhoAreWe,
@@ -41,7 +42,8 @@ class DetailsTab extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16.h),
-            const Text("What we provide !", style: AppTextStyles.paragraph01SemiBold),
+            const Text("What we provide !",
+                style: AppTextStyles.paragraph01SemiBold),
             SizedBox(height: 8.h),
             Wrap(
               spacing: 8.w,
@@ -67,7 +69,6 @@ class DetailsTab extends StatelessWidget {
                 );
               }),
             ),
-
             SizedBox(height: 32.h),
             WtireAReviewFavoriteButtons(clinic: clinic),
           ],

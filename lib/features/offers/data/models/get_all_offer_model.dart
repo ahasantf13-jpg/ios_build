@@ -1,5 +1,5 @@
-import 'package:glowguide/features/clinics/data/models/clinic_model.dart';
-import 'package:glowguide/features/offers/domain/entities/get_all_offers_entities.dart';
+import 'package:beautygm/features/clinics/data/models/clinic_model.dart';
+import 'package:beautygm/features/offers/domain/entities/get_all_offers_entities.dart';
 
 class GetAllOfferModel extends GetAllOffersEntities {
   GetAllOfferModel({

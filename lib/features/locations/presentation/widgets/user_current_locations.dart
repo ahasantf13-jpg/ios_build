@@ -1,7 +1,7 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_cubit.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_states.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_cubit.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

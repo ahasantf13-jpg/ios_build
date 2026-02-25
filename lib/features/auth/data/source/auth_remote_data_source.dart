@@ -1,7 +1,7 @@
-import 'package:glowguide/core/databases/api/api_consumer.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/features/auth/data/models/login_model.dart';
+import 'package:beautygm/core/databases/api/api_consumer.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/features/auth/data/models/login_model.dart';
 import 'package:dio/dio.dart';
 
 class AuthRemoteDataSource {
@@ -26,7 +26,7 @@ class AuthRemoteDataSource {
       "type": params.type,
       "phone_number": params.phoneNumber,
       "business_name": params.businessName,
-      "is_male": params.isMale ? 1 : 0,
+      "is_male": 0,
     };
 
     if (params.commercialImageUrl != null) {

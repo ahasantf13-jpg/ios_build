@@ -1,4 +1,4 @@
-import 'package:glowguide/features/password/domain/entities/confirm_reset_password_entity.dart';
+import 'package:beautygm/features/password/domain/entities/confirm_reset_password_entity.dart';
 
 class ConfirmResetPasswordModel extends ConfirmResetPasswordEntity {
   ConfirmResetPasswordModel({required super.tempToken});

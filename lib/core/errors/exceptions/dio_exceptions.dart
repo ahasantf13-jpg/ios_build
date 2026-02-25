@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:glowguide/core/errors/exceptions/http_exceptions.dart';
-import 'package:glowguide/core/errors/exceptions/network_exceptions.dart';
-import 'package:glowguide/core/errors/exceptions/server_exceptions.dart';
-import 'package:glowguide/core/errors/models/error_model.dart';
+import 'package:beautygm/core/errors/exceptions/http_exceptions.dart';
+import 'package:beautygm/core/errors/exceptions/network_exceptions.dart';
+import 'package:beautygm/core/errors/exceptions/server_exceptions.dart';
+import 'package:beautygm/core/errors/models/error_model.dart';
 
 Never handleDioException(DioException e) {
   final ErrorModel error = _extractErrorModel(e);

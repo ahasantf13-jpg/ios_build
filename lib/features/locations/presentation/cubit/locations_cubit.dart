@@ -1,16 +1,16 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/locations/data/repository/locations_repository_impl.dart';
-import 'package:glowguide/features/locations/data/source/locations_local_data_source.dart';
-import 'package:glowguide/features/locations/data/source/locations_remote_data_source.dart';
-import 'package:glowguide/features/locations/domain/usecases/add_new_location_usecase.dart';
-import 'package:glowguide/features/locations/domain/usecases/delete_location_usecase.dart';
-import 'package:glowguide/features/locations/domain/usecases/get_all_locations_usecase.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_states.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/locations/data/repository/locations_repository_impl.dart';
+import 'package:beautygm/features/locations/data/source/locations_local_data_source.dart';
+import 'package:beautygm/features/locations/data/source/locations_remote_data_source.dart';
+import 'package:beautygm/features/locations/domain/usecases/add_new_location_usecase.dart';
+import 'package:beautygm/features/locations/domain/usecases/delete_location_usecase.dart';
+import 'package:beautygm/features/locations/domain/usecases/get_all_locations_usecase.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LocationsCubit extends Cubit<LocationsStates> {

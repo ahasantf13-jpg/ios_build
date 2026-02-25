@@ -1,13 +1,13 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_cubit.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_states.dart';
-import 'package:glowguide/features/auth/presentation/widgets/otp_form.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_cubit.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_states.dart';
+import 'package:beautygm/features/auth/presentation/widgets/otp_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/features/password/presentation/pages/new_password_page.dart';
+import 'package:beautygm/features/password/presentation/pages/new_password_page.dart';
 
 class OtpPage extends StatefulWidget {
   final String email;

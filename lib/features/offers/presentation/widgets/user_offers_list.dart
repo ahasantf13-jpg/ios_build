@@ -1,7 +1,7 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/clinics/presentation/pages/clinic_details_page.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offer_states.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offers_cubit.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/clinics/presentation/pages/clinic_details_page.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offer_states.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offers_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

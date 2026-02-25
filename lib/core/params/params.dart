@@ -16,7 +16,7 @@ class SignupUserParams {
   final String businessName;
   final File? commercialImageUrl;
   final File? profileImageUrl;
-  final bool isMale;
+  final bool? isMale;
 
   SignupUserParams({
     required this.fullName,

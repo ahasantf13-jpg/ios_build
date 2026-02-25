@@ -1,9 +1,9 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/notifications/domain/entities/notification_entity.dart';
-import 'package:glowguide/features/notifications/presentation/cubit/notifications_cubit.dart';
-import 'package:glowguide/features/notifications/presentation/cubit/notifications_states.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/notifications/domain/entities/notification_entity.dart';
+import 'package:beautygm/features/notifications/presentation/cubit/notifications_cubit.dart';
+import 'package:beautygm/features/notifications/presentation/cubit/notifications_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +18,8 @@ class NotificationsPage extends StatelessWidget {
       create: (context) => NotificationsCubit()..getCurrentUserNotifications(),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Notifications", style: AppTextStyles.heading01SemiBold),
+          title: const Text("Notifications",
+              style: AppTextStyles.heading01SemiBold),
           backgroundColor: Colors.white,
         ),
         body: BlocConsumer<NotificationsCubit, NotificationsStates>(

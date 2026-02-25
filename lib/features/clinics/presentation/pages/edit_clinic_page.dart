@@ -1,7 +1,7 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/add_image_widget.dart';
-import 'package:glowguide/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/add_image_widget.dart';
+import 'package:beautygm/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -83,7 +83,8 @@ class EditClinicPage extends StatelessWidget {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      title: const Text("Edit Clinic", style: AppTextStyles.paragraph02SemiBold),
+      title:
+          const Text("Edit Clinic", style: AppTextStyles.paragraph02SemiBold),
       actions: [
         GestureDetector(
           onTap: () {},

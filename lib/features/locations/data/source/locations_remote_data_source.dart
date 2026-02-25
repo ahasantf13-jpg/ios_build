@@ -1,9 +1,9 @@
-import 'package:glowguide/core/databases/api/api_consumer.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/locations/data/models/locations_model.dart';
+import 'package:beautygm/core/databases/api/api_consumer.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/locations/data/models/locations_model.dart';
 import 'package:dio/dio.dart';
 
 class LocationsRemoteDataSource {

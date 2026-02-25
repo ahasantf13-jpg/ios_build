@@ -1,10 +1,10 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/errors/exceptions/app_exceptions.dart';
-import 'package:glowguide/core/errors/models/failure.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/features/auth/data/source/auth_remote_data_source.dart';
-import 'package:glowguide/features/auth/domain/entities/login_entity.dart';
-import 'package:glowguide/features/auth/domain/repos/auth_repository.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/errors/exceptions/app_exceptions.dart';
+import 'package:beautygm/core/errors/models/failure.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/features/auth/data/source/auth_remote_data_source.dart';
+import 'package:beautygm/features/auth/domain/entities/login_entity.dart';
+import 'package:beautygm/features/auth/domain/repos/auth_repository.dart';
 import 'package:dartz/dartz.dart';
 
 class AuthRepositoryImpl extends AuthReposirory {

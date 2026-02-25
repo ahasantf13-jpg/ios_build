@@ -1,14 +1,14 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/auth/data/repos/auth_repository_impl.dart';
-import 'package:glowguide/features/auth/data/source/auth_remote_data_source.dart';
-import 'package:glowguide/features/auth/domain/usecases/login_user_usecase.dart';
-import 'package:glowguide/features/auth/domain/usecases/sign_up_clinic_owner_usecase.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_states.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/auth/data/repos/auth_repository_impl.dart';
+import 'package:beautygm/features/auth/data/source/auth_remote_data_source.dart';
+import 'package:beautygm/features/auth/domain/usecases/login_user_usecase.dart';
+import 'package:beautygm/features/auth/domain/usecases/sign_up_clinic_owner_usecase.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthCubit extends Cubit<AuthStates> {

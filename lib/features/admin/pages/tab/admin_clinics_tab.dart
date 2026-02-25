@@ -1,7 +1,7 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/admin/pages/tab/sub_tabs/current_clinic_sub_tab.dart';
-import 'package:glowguide/features/admin/pages/tab/sub_tabs/pending_clinics_sub_tab.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/admin/pages/tab/sub_tabs/current_clinic_sub_tab.dart';
+import 'package:beautygm/features/admin/pages/tab/sub_tabs/pending_clinics_sub_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

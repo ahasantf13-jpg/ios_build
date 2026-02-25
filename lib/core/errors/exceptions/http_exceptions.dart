@@ -1,4 +1,4 @@
-import 'package:glowguide/core/errors/exceptions/server_exceptions.dart';
+import 'package:beautygm/core/errors/exceptions/server_exceptions.dart';
 
 class BadRequestException extends ServerException {
   const BadRequestException(super.error);

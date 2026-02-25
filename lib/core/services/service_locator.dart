@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final GetIt getIt = GetIt.instance;

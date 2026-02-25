@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:glowguide/core/databases/api/api_consumer.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/errors/exceptions/dio_exceptions.dart';
+import 'package:beautygm/core/databases/api/api_consumer.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/errors/exceptions/dio_exceptions.dart';
 
 class DioConsumer extends ApiConsumer {
   final Dio dio;

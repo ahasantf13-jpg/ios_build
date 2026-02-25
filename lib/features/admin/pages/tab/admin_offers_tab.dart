@@ -1,5 +1,5 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/offers/presentation/widgets/admin_offers_list.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/offers/presentation/widgets/admin_offers_list.dart';
 import 'package:flutter/material.dart';
 
 class AdminOffersTab extends StatelessWidget {
@@ -11,7 +11,6 @@ class AdminOffersTab extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("Pending Offers", style: AppTextStyles.paragraph01SemiBold),
-
         AdminOffersList(),
       ],
     );

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
 
 final appTheme = ThemeData(
   useMaterial3: true,
   fontFamily: 'Poppins',
   primaryColor: AppColors.primary05,
   scaffoldBackgroundColor: AppColors.white,
-
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: AppColors.primary05,
@@ -20,7 +19,6 @@ final appTheme = ThemeData(
       textStyle: AppTextStyles.paragraph01Regular,
     ),
   ),
-
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       minimumSize: Size.fromHeight(48.h),
@@ -31,7 +29,6 @@ final appTheme = ThemeData(
       textStyle: AppTextStyles.paragraph01Regular,
     ),
   ),
-
   inputDecorationTheme: InputDecorationTheme(
     contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
     filled: true,
@@ -48,7 +45,6 @@ final appTheme = ThemeData(
       color: AppColors.gary03,
     ),
   ),
-
   progressIndicatorTheme: const ProgressIndicatorThemeData(
     color: AppColors.primary05,
   ),

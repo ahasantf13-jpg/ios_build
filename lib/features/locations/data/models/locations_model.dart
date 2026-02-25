@@ -1,4 +1,4 @@
-import 'package:glowguide/features/locations/domain/entities/location_entity.dart';
+import 'package:beautygm/features/locations/domain/entities/location_entity.dart';
 
 class LocationsModel extends LocationEntity {
   LocationsModel({

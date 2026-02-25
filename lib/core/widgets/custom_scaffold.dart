@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:glowguide/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
 
 class CustomScaffold extends StatelessWidget {
   final void Function()? onTap;
@@ -34,11 +34,9 @@ class CustomScaffold extends StatelessWidget {
                   height: 120,
                   fit: BoxFit.fill,
                 ),
-
                 Positioned.fill(
                   child: Container(color: Colors.white.withAlpha(235)),
                 ),
-
                 if (showBackButton)
                   Positioned(
                     top: 44,
@@ -50,7 +48,6 @@ class CustomScaffold extends StatelessWidget {
                       icon: const Icon(Icons.arrow_back, size: 24),
                     ),
                   ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,

@@ -1,4 +1,4 @@
-import 'package:glowguide/features/notifications/domain/entities/notification_entity.dart';
+import 'package:beautygm/features/notifications/domain/entities/notification_entity.dart';
 
 class NotificationModel extends NotificationEntity {
   final String recipient;

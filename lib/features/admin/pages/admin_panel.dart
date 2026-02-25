@@ -1,12 +1,12 @@
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/admin/pages/tab/admin_clinics_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/admin/pages/tab/admin_clinics_tab.dart';
-import 'package:glowguide/features/admin/pages/tab/admin_offers_tab.dart';
-import 'package:glowguide/features/admin/pages/tab/admin_reviews_tab.dart';
-import 'package:glowguide/features/auth/presentation/widgets/logout_button.dart';
-import 'package:glowguide/features/notifications/presentation/pages/notifications_page.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/features/admin/pages/tab/admin_offers_tab.dart';
+import 'package:beautygm/features/admin/pages/tab/admin_reviews_tab.dart';
+import 'package:beautygm/features/auth/presentation/widgets/logout_button.dart';
+import 'package:beautygm/features/notifications/presentation/pages/notifications_page.dart';
 
 class AdminPanel extends StatelessWidget {
   const AdminPanel({super.key});
@@ -83,7 +83,7 @@ class AdminPanel extends StatelessWidget {
           children: [
             Image.asset(AppAssets.logo, width: 32.w, height: 32.w),
             SizedBox(width: 8.w),
-            const Text("GlowGuide", style: AppTextStyles.paragraph02SemiBold),
+            const Text("BeautyGM", style: AppTextStyles.paragraph02SemiBold),
           ],
         ),
         Row(

@@ -1,14 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_states.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_states.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_cubit.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_cubit.dart';
 
 class EditeProfileDetails extends StatefulWidget {
   const EditeProfileDetails({super.key});

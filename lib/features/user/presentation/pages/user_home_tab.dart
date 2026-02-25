@@ -1,18 +1,18 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/clinics/domain/entities/clinic_entity.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_cubit.dart';
-import 'package:glowguide/features/clinics/presentation/widgets/top_rated_clinics.dart';
-import 'package:glowguide/features/locations/presentation/widgets/user_main_location.dart';
-import 'package:glowguide/features/notifications/presentation/widgets/notifications_button.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offers_cubit.dart';
-import 'package:glowguide/features/reviews/presentation/cubit/reviews_cubit.dart';
-import 'package:glowguide/features/reviews/presentation/widgets/reviews_from_others.dart';
-import 'package:glowguide/features/user/presentation/widgets/categories_selector.dart';
-import 'package:glowguide/features/user/presentation/widgets/stack_carousel.dart';
-import 'package:glowguide/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_cubit.dart';
+import 'package:beautygm/features/clinics/presentation/widgets/top_rated_clinics.dart';
+import 'package:beautygm/features/locations/presentation/widgets/user_main_location.dart';
+import 'package:beautygm/features/notifications/presentation/widgets/notifications_button.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offers_cubit.dart';
+import 'package:beautygm/features/reviews/presentation/cubit/reviews_cubit.dart';
+import 'package:beautygm/features/reviews/presentation/widgets/reviews_from_others.dart';
+import 'package:beautygm/features/user/presentation/widgets/categories_selector.dart';
+import 'package:beautygm/features/user/presentation/widgets/stack_carousel.dart';
+import 'package:beautygm/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -190,7 +190,7 @@ class _UserHomeTabState extends State<UserHomeTab> {
             children: [
               Image.asset(AppAssets.logo, width: 32.w, height: 32.w),
               SizedBox(width: 8.w),
-              const Text("GlowGuide", style: AppTextStyles.paragraph02SemiBold),
+              const Text("BeautyGM", style: AppTextStyles.paragraph02SemiBold),
             ],
           ),
           const NotificationsButton(),

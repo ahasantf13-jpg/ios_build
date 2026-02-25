@@ -1,6 +1,6 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/notifications/presentation/widgets/notifications_button.dart';
-import 'package:glowguide/features/offers/presentation/widgets/user_offers_list.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/notifications/presentation/widgets/notifications_button.dart';
+import 'package:beautygm/features/offers/presentation/widgets/user_offers_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

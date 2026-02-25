@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/errors/exceptions/cache_exceptions.dart';
-import 'package:glowguide/core/errors/models/error_model.dart';
-import 'package:glowguide/features/clinics/data/models/clinic_model.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/errors/exceptions/cache_exceptions.dart';
+import 'package:beautygm/core/errors/models/error_model.dart';
+import 'package:beautygm/features/clinics/data/models/clinic_model.dart';
 
 class ClinicsLocalDataSource {
   final CacheHelper cache;

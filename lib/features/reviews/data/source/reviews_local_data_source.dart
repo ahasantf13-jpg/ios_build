@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/errors/exceptions/cache_exceptions.dart';
-import 'package:glowguide/core/errors/models/error_model.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/reviews/data/models/reviews_model.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/errors/exceptions/cache_exceptions.dart';
+import 'package:beautygm/core/errors/models/error_model.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/reviews/data/models/reviews_model.dart';
 
 class ReviewsLocalDataSource {
   CacheHelper cache = getIt<CacheHelper>();

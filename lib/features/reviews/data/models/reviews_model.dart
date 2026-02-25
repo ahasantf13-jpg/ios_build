@@ -1,6 +1,6 @@
-import 'package:glowguide/features/auth/data/models/login_model.dart';
-import 'package:glowguide/features/reviews/domain/entities/reviews_entity.dart';
-import 'package:glowguide/features/clinics/data/models/clinic_model.dart';
+import 'package:beautygm/features/auth/data/models/login_model.dart';
+import 'package:beautygm/features/reviews/domain/entities/reviews_entity.dart';
+import 'package:beautygm/features/clinics/data/models/clinic_model.dart';
 
 class ReviewsModel extends ReviewsEntity {
   ReviewsModel({
@@ -19,10 +19,8 @@ class ReviewsModel extends ReviewsEntity {
       reviewID: json["id"] ?? "",
       clinicID: json["cid"] ?? "",
       clinicDetails: ClinicModel.fromJson(json["clinic"] ?? {}),
-
       userID: json["uid"] ?? "",
       userDetails: UserModel.fromJson(json["user"] ?? {}),
-
       reviewRating: (json["rating"] ?? 0).toInt(),
       reviewContent: json["text"] ?? "",
       reviewStatus: json["status"] ?? "",

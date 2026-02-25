@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/owner/pages/owner_home_tab.dart';
-import 'package:glowguide/features/owner/pages/owner_my_clinics_tab.dart';
-import 'package:glowguide/features/profile/presentation/pages/my_profile_tab.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/owner/pages/owner_home_tab.dart';
+import 'package:beautygm/features/owner/pages/owner_my_clinics_tab.dart';
+import 'package:beautygm/features/profile/presentation/pages/my_profile_tab.dart';
 
 class OwnerTabsLayout extends StatefulWidget {
   const OwnerTabsLayout({super.key});

@@ -1,21 +1,21 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/databases/api/end_points.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/widgets/logout_button.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_cubit.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_states.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_cubit.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_states.dart';
-import 'package:glowguide/features/profile/presentation/pages/account_details_page.dart';
-import 'package:glowguide/features/locations/presentation/pages/contact_us_page.dart';
-import 'package:glowguide/features/locations/presentation/pages/faq_page.dart';
-import 'package:glowguide/features/locations/presentation/pages/user_profile_addresses_page.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/widgets/logout_button.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_cubit.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_states.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_cubit.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_states.dart';
+import 'package:beautygm/features/profile/presentation/pages/account_details_page.dart';
+import 'package:beautygm/features/locations/presentation/pages/contact_us_page.dart';
+import 'package:beautygm/features/locations/presentation/pages/faq_page.dart';
+import 'package:beautygm/features/locations/presentation/pages/user_profile_addresses_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -354,7 +354,8 @@ class _MyProfileTabState extends State<MyProfileTab> {
                             padding: EdgeInsets.only(top: 16.h),
                             child: Text(
                               errorMessage,
-                              style: const TextStyle(color: Colors.red, fontSize: 14),
+                              style: const TextStyle(
+                                  color: Colors.red, fontSize: 14),
                             ),
                           ),
                         SizedBox(height: 30.h),

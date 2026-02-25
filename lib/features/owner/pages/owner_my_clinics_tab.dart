@@ -1,9 +1,9 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_cubit.dart';
-import 'package:glowguide/features/clinics/presentation/widgets/my_clinics_tab_list.dart';
-import 'package:glowguide/features/notifications/presentation/pages/notifications_page.dart';
-import 'package:glowguide/features/clinics/presentation/pages/add_new_clinic_page.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_cubit.dart';
+import 'package:beautygm/features/clinics/presentation/widgets/my_clinics_tab_list.dart';
+import 'package:beautygm/features/notifications/presentation/pages/notifications_page.dart';
+import 'package:beautygm/features/clinics/presentation/pages/add_new_clinic_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

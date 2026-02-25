@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/layouts/auth_layout.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/features/delete_account/presentation/cubit/delete_account_cubit.dart';
-import 'package:glowguide/features/delete_account/presentation/cubit/delete_account_state.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/features/delete_account/presentation/cubit/delete_account_cubit.dart';
+import 'package:beautygm/features/delete_account/presentation/cubit/delete_account_state.dart';
 
 class DeleteAccountPage extends StatefulWidget {
   const DeleteAccountPage({super.key});
@@ -65,8 +65,8 @@ class _DeleteAccountPageState extends State<DeleteAccountPage> {
           getIt<CacheHelper>().clear();
 
           if (mounted) {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => const AuthLayout()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const AuthLayout()));
           }
         } else if (state is DeleteAccountFailed) {
           showDialog(

@@ -1,14 +1,14 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/profile/data/repos/account_details_repository_impl.dart';
-import 'package:glowguide/features/profile/data/sources/account_details_local_data_source.dart';
-import 'package:glowguide/features/profile/data/sources/account_details_remote_data_source.dart';
-import 'package:glowguide/features/profile/domain/usecase/get_account_details_usecase.dart';
-import 'package:glowguide/features/profile/domain/usecase/update_profile_usecase.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_states.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/profile/data/repos/account_details_repository_impl.dart';
+import 'package:beautygm/features/profile/data/sources/account_details_local_data_source.dart';
+import 'package:beautygm/features/profile/data/sources/account_details_remote_data_source.dart';
+import 'package:beautygm/features/profile/domain/usecase/get_account_details_usecase.dart';
+import 'package:beautygm/features/profile/domain/usecase/update_profile_usecase.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AccountDetailsCubit extends Cubit<AccountDetailsStates> {

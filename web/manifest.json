@@ -1,6 +1,6 @@
 {
-    "name": "glowguide",
-    "short_name": "glowguide",
+    "name": "beautygm",
+    "short_name": "beautygm",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

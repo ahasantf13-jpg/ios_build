@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SocialBottons extends StatelessWidget {
   final void Function()? googleAuth;
@@ -22,12 +21,12 @@ class SocialBottons extends StatelessWidget {
           imageAsset: 'assets/images/icons/GoogleIcon.png',
           onTap: googleAuth,
         ),
-        SizedBox(width: 10.w),
+        const SizedBox(width: 8),
         _buildSocialButton(
           imageAsset: 'assets/images/icons/AppleIcon.png',
           onTap: appleAuth,
         ),
-        SizedBox(width: 10.w),
+        const SizedBox(width: 8),
         _buildSocialButton(
           imageAsset: 'assets/images/icons/FacebookIcon.png',
           onTap: facebookAuth,
@@ -43,15 +42,15 @@ class SocialBottons extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 56.w,
-        height: 56.w,
-        padding: EdgeInsets.all(16.w),
+        width: 56,
+        height: 56,
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(12.r),
+          borderRadius: BorderRadius.circular(12),
           border: Border.all(color: const Color(0xFFDBDDDF), width: 1),
         ),
-        child: Image.asset(imageAsset, width: 24.w),
+        child: Image.asset(imageAsset, width: 24),
       ),
     );
   }

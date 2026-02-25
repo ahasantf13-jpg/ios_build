@@ -1,14 +1,14 @@
 import 'dart:io';
 
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/widgets/phone_input.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_cubit.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_state.dart';
-import 'package:glowguide/core/widgets/add_image_widget.dart';
-import 'package:glowguide/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/widgets/phone_input.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_cubit.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_state.dart';
+import 'package:beautygm/core/widgets/add_image_widget.dart';
+import 'package:beautygm/features/user/presentation/widgets/user_search_filter_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

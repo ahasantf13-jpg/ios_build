@@ -1,15 +1,15 @@
-import 'package:glowguide/core/connections/network_info.dart';
-import 'package:glowguide/core/databases/api/dio_consumer.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/clinics/data/repos/clinics_repository_impl.dart';
-import 'package:glowguide/features/clinics/data/source/clinics_local_data_source.dart';
-import 'package:glowguide/features/clinics/data/source/clinics_remote_data_source.dart';
-import 'package:glowguide/features/clinics/domain/usecases/admin_approve_reject_clinic_usecase.dart';
-import 'package:glowguide/features/clinics/domain/usecases/create_new_clinic_usecase.dart';
-import 'package:glowguide/features/clinics/domain/usecases/get_all_clinics_usecase.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_state.dart';
+import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/dio_consumer.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/clinics/data/repos/clinics_repository_impl.dart';
+import 'package:beautygm/features/clinics/data/source/clinics_local_data_source.dart';
+import 'package:beautygm/features/clinics/data/source/clinics_remote_data_source.dart';
+import 'package:beautygm/features/clinics/domain/usecases/admin_approve_reject_clinic_usecase.dart';
+import 'package:beautygm/features/clinics/domain/usecases/create_new_clinic_usecase.dart';
+import 'package:beautygm/features/clinics/domain/usecases/get_all_clinics_usecase.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ClinicsCubit extends Cubit<ClinicsState> {

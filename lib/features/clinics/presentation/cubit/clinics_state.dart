@@ -1,4 +1,4 @@
-import 'package:glowguide/features/clinics/domain/entities/clinic_entity.dart';
+import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
 
 abstract class ClinicsState {}
 

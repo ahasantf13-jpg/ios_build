@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/layouts/auth_layout.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_cubit.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_states.dart';
-import 'package:glowguide/core/params/params.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_cubit.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_states.dart';
+import 'package:beautygm/core/params/params.dart';
 
 class NewPasswordPage extends StatefulWidget {
   final String tempToken;

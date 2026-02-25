@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/onboarding/pages/onboarding_page.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
 
     await Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) => const OnboardingPage()),
+      MaterialPageRoute(builder: (_) => const AuthLayout()),
     );
   }
 
@@ -43,7 +43,7 @@ class _SplashPageState extends State<SplashPage> {
             Image.asset(AppAssets.logo, width: 150, height: 150),
             SizedBox(height: 20.h),
             Text(
-              "GlowGuide",
+              "BeautyGM",
               style: AppTextStyles.heading01SemiBold.copyWith(
                 color: Colors.white,
               ),

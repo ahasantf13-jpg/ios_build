@@ -1,7 +1,7 @@
-import 'package:glowguide/core/errors/models/failure.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/features/password/domain/entities/confirm_reset_password_entity.dart';
-import 'package:glowguide/features/password/domain/entities/reset_password_entity.dart';
+import 'package:beautygm/core/errors/models/failure.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/features/password/domain/entities/confirm_reset_password_entity.dart';
+import 'package:beautygm/features/password/domain/entities/reset_password_entity.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class PasswordRepository {

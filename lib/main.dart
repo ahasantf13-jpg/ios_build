@@ -1,22 +1,27 @@
-import 'package:glowguide/core/layouts/auth_layout.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/core/themes/app_theme.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:glowguide/features/clinics/presentation/cubit/clinics_cubit.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_cubit.dart';
-import 'package:glowguide/features/offers/presentation/cubit/offers_cubit.dart';
-import 'package:glowguide/features/password/presentation/cubit/password_cubit.dart';
-import 'package:glowguide/features/profile/presentation/cubit/account_details_cubit.dart';
-import 'package:glowguide/features/reviews/presentation/cubit/reviews_clinic_i_d_cubit.dart';
-import 'package:glowguide/features/reviews/presentation/cubit/reviews_cubit.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/core/themes/app_theme.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:beautygm/features/clinics/presentation/cubit/clinics_cubit.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_cubit.dart';
+import 'package:beautygm/features/offers/presentation/cubit/offers_cubit.dart';
+import 'package:beautygm/features/password/presentation/cubit/password_cubit.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_cubit.dart';
+import 'package:beautygm/features/reviews/presentation/cubit/reviews_clinic_i_d_cubit.dart';
+import 'package:beautygm/features/reviews/presentation/cubit/reviews_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
+
+  await SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.immersiveSticky,
+  );
 
   runApp(
     MyApp(),
@@ -50,7 +55,7 @@ class MyApp extends StatelessWidget {
         builder: (_, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'glowguide',
+            title: 'BeautyGM',
             theme: appTheme,
             scaffoldMessengerKey: _scaffoldMessenger.messengerKey,
             home: child,

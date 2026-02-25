@@ -1,5 +1,5 @@
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/features/reviews/presentation/widgets/admin_reviews_list.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/features/reviews/presentation/widgets/admin_reviews_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

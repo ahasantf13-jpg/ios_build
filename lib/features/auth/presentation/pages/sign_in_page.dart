@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/layouts/auth_layout.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/utils/validators.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_states.dart';
-import 'package:glowguide/features/auth/presentation/pages/choose_role_page.dart';
-import 'package:glowguide/features/password/presentation/pages/reset_password_page.dart';
-import 'package:glowguide/features/auth/presentation/widgets/social_bottons.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/utils/validators.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_states.dart';
+import 'package:beautygm/features/auth/presentation/pages/choose_role_page.dart';
+import 'package:beautygm/features/password/presentation/pages/reset_password_page.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -219,36 +218,36 @@ class _SignInPageState extends State<SignInPage> {
                                   )
                                 : const Text("Login"),
                           ),
-                          SizedBox(height: 15.h),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Text(
-                              "OR CONTINUE WITH",
-                              style: AppTextStyles.captionSemiBold.copyWith(
-                                color: const Color(0xFF78808B),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 15.h),
-                          SocialBottons(
-                            googleAuth: () async {
-                              // try {
-                              //   final result = await signInWithGoogle();
+                          // SizedBox(height: 15.h),
+                          // Align(
+                          //   alignment: Alignment.center,
+                          //   child: Text(
+                          //     "OR CONTINUE WITH",
+                          //     style: AppTextStyles.captionSemiBold.copyWith(
+                          //       color: const Color(0xFF78808B),
+                          //     ),
+                          //   ),
+                          // ),
+                          // SizedBox(height: 15.h),
+                          // SocialBottons(
+                          //   googleAuth: () async {
+                          //     // try {
+                          //     //   final result = await signInWithGoogle();
 
-                              //   if (result != null && context.mounted) {
-                              //     await Navigator.pushAndRemoveUntil(
-                              //       context,
-                              //       MaterialPageRoute(
-                              //           builder: (context) =>
-                              //               const AuthLayout()),
-                              //       (route) => false,
-                              //     );
-                              //   }
-                              // } finally {}
-                            },
-                            appleAuth: () {},
-                            facebookAuth: () {},
-                          ),
+                          //     //   if (result != null && context.mounted) {
+                          //     //     await Navigator.pushAndRemoveUntil(
+                          //     //       context,
+                          //     //       MaterialPageRoute(
+                          //     //           builder: (context) =>
+                          //     //               const AuthLayout()),
+                          //     //       (route) => false,
+                          //     //     );
+                          //     //   }
+                          //     // } finally {}
+                          //   },
+                          //   appleAuth: () {},
+                          //   facebookAuth: () {},
+                          // ),
                           SizedBox(height: 15.h),
                           Align(
                             alignment: Alignment.center,

@@ -1,9 +1,9 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/databases/cache/cache_helper.dart';
-import 'package:glowguide/core/services/service_locator.dart';
-import 'package:glowguide/features/onboarding/widgets/page_indicator.dart';
-import 'package:glowguide/features/onboarding/pages/get_started_page.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/onboarding/widgets/page_indicator.dart';
+import 'package:beautygm/features/onboarding/pages/get_started_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -51,7 +51,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   backgroundColor: const Color(0xFFFFFFFF),
                   imageAsset: AppAssets.onboarding1,
                   bannerAsset: AppAssets.banner1,
-                  title: "Welcome to GlowGuide 👋",
+                  title: "Welcome to BeautyGM 👋",
                   subtitle:
                       "Share your experience. Help others discover trusted beauty centers.",
                 ),
@@ -113,7 +113,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
               Image.asset(
                 bannerAsset,
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
                 width: double.infinity,
                 height: 375,
               ),

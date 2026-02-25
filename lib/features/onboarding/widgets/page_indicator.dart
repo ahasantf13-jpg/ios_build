@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TwoDotIndicator extends StatelessWidget {
   final int currentIndex;
@@ -34,9 +33,7 @@ class TwoDotIndicator extends StatelessWidget {
               color: currentIndex == 0 ? activeColor : inactiveColor,
             ),
             _buildDot(isActive: currentIndex == 0),
-
-            SizedBox(width: 16.w),
-
+            const SizedBox(width: 16),
             _buildDot(isActive: currentIndex == 1),
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
@@ -46,9 +43,7 @@ class TwoDotIndicator extends StatelessWidget {
               color: currentIndex == 1 ? activeColor : inactiveColor,
             ),
             _buildDot(isActive: currentIndex == 1),
-
-            SizedBox(width: 16.w),
-
+            const SizedBox(width: 16),
             _buildDot(isActive: currentIndex == 2),
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
@@ -60,15 +55,13 @@ class TwoDotIndicator extends StatelessWidget {
             _buildDot(isActive: currentIndex == 2),
           ],
         ),
-
-        SizedBox(height: 16.h),
-
+        const SizedBox(height: 16),
         Text(
           "${currentIndex + 1} / $totalPages",
-          style: TextStyle(
-            fontSize: 14.sp,
+          style: const TextStyle(
+            fontSize: 14,
             fontWeight: FontWeight.w500,
-            color: const Color(0xFF132018),
+            color: Color(0xFF132018),
           ),
         ),
       ],
@@ -81,8 +74,8 @@ class TwoDotIndicator extends StatelessWidget {
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-      width: isActive ? 12.w : 8.w,
-      height: isActive ? 12.w : 8.w,
+      width: isActive ? 12 : 8,
+      height: isActive ? 12 : 8,
       decoration: BoxDecoration(
         color: isActive ? activeColor : inactiveColor,
         shape: BoxShape.circle,

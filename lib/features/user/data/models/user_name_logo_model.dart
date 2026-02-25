@@ -1,4 +1,4 @@
-import 'package:glowguide/features/user/domain/entities/user_name_logo_entity.dart';
+import 'package:beautygm/features/user/domain/entities/user_name_logo_entity.dart';
 
 class UserNameLogoModel extends UserNameLogoEntity {
   UserNameLogoModel({required super.fullName, super.profilePicture});

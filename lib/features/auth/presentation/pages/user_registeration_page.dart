@@ -1,16 +1,15 @@
 import 'dart:io';
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/utils/validators.dart';
-import 'package:glowguide/core/widgets/add_image_widget.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_states.dart';
-import 'package:glowguide/features/auth/presentation/pages/sign_in_page.dart';
-import 'package:glowguide/features/auth/presentation/widgets/phone_input.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/utils/validators.dart';
+import 'package:beautygm/core/widgets/add_image_widget.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_states.dart';
+import 'package:beautygm/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:beautygm/features/auth/presentation/widgets/phone_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,8 +33,6 @@ class _UserRegisterationPageState extends State<UserRegisterationPage> {
 
   File? _profileImage;
   final ImagePicker _picker = ImagePicker();
-
-  bool? isMale;
 
   Future<void> _pickProfileImage() async {
     try {
@@ -81,11 +78,6 @@ class _UserRegisterationPageState extends State<UserRegisterationPage> {
       return;
     }
 
-    if (isMale == null) {
-      CustomScaffoldMessenger().showFail("Please select your gender.");
-      return;
-    }
-
     final params = SignupUserParams(
       fullName: nameController.text.trim(),
       email: emailController.text.trim(),
@@ -95,7 +87,7 @@ class _UserRegisterationPageState extends State<UserRegisterationPage> {
       businessName: "",
       commercialImageUrl: null,
       profileImageUrl: _profileImage,
-      isMale: isMale!,
+      isMale: null,
     );
 
     context.read<AuthCubit>().signupUser(params);
@@ -129,7 +121,7 @@ class _UserRegisterationPageState extends State<UserRegisterationPage> {
           safeTop: false,
           children: [
             const Text(
-              "Welcome to GlowGuide 🎉",
+              "Welcome to BeautyGM 🎉",
               style: AppTextStyles.heading01SemiBold,
             ),
             Text(
@@ -167,64 +159,7 @@ class _UserRegisterationPageState extends State<UserRegisterationPage> {
             SizedBox(
               height: 16.h,
             ),
-            // GENDER SECTION
-            Text(
-              "Gender",
-              style: AppTextStyles.paragraph02Regular.copyWith(
-                color: AppColors.gary10,
-              ),
-            ),
             SizedBox(height: 8.h),
-
-            Row(
-              children: [
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () => setState(() => isMale = true),
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 14.h),
-                      decoration: BoxDecoration(
-                        color:
-                            isMale == true ? Colors.blue : Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Male",
-                          style: TextStyle(
-                            color: isMale == true ? Colors.white : Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 12.w),
-                Expanded(
-                  child: GestureDetector(
-                    onTap: () => setState(() => isMale = false),
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 14.h),
-                      decoration: BoxDecoration(
-                        color: isMale == false
-                            ? Colors.pink
-                            : Colors.grey.shade200,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Female",
-                          style: TextStyle(
-                            color:
-                                isMale == false ? Colors.white : Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
 
             SizedBox(height: 16.h),
 

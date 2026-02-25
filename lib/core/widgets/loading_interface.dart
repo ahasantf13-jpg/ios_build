@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
 
 class LoadingInterface extends StatelessWidget {
   const LoadingInterface({super.key});

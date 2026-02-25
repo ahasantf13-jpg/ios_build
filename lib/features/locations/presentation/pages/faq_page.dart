@@ -1,5 +1,5 @@
-import 'package:glowguide/core/constants/app_colors.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/constants/app_colors.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,12 +10,12 @@ class FaqPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, String>> glowGuideFaq = [
       {
-        "q": "What is GlowGuide?",
+        "q": "What is BeautyGM?",
         "a":
-            "GlowGuide is a platform that helps people find trusted beauty clinics, doctors, and treatments based on real experiences from verified users.",
+            "BeautyGM is a platform that helps people find trusted beauty clinics, doctors, and treatments based on real experiences from verified users.",
       },
       {
-        "q": "Who can use GlowGuide?",
+        "q": "Who can use BeautyGM?",
         "a":
             "Anyone interested in beauty treatments, facials, skincare, laser, injectables or aesthetic procedures can use the app. It is not gender-specific.",
       },
@@ -30,14 +30,14 @@ class FaqPage extends StatelessWidget {
             "Verification prevents fake accounts, reduces misleading reviews, and keeps the platform transparent and credible.",
       },
       {
-        "q": "How do reviews work on GlowGuide?",
+        "q": "How do reviews work on BeautyGM?",
         "a":
             "Users share honest experiences after receiving a treatment. Reviews include service quality, results, cost impressions and overall satisfaction.",
       },
       {
         "q": "Are clinics verified?",
         "a":
-            "Yes. Clinic profiles undergo a verification check to ensure they are legitimate and aligned with GlowGuide quality standards.",
+            "Yes. Clinic profiles undergo a verification check to ensure they are legitimate and aligned with BeautyGM quality standards.",
       },
       {
         "q": "Can I leave a review without visiting a clinic?",
@@ -65,9 +65,9 @@ class FaqPage extends StatelessWidget {
             "You can report any review or clinic profile directly from the app. Reports are reviewed carefully.",
       },
       {
-        "q": "Do I need to pay to use GlowGuide?",
+        "q": "Do I need to pay to use BeautyGM?",
         "a":
-            "GlowGuide is free to use. Additional professional tools may be added later.",
+            "BeautyGM is free to use. Additional professional tools may be added later.",
       },
       {
         "q": "How can a clinic claim its profile?",

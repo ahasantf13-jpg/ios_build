@@ -1,4 +1,4 @@
-import 'package:glowguide/features/profile/domain/entities/account_details_entity.dart';
+import 'package:beautygm/features/profile/domain/entities/account_details_entity.dart';
 
 class AccountDetailsModel extends AccountDetailsEntity {
   final String userID;

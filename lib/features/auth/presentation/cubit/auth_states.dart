@@ -1,4 +1,4 @@
-import 'package:glowguide/features/auth/domain/entities/login_entity.dart';
+import 'package:beautygm/features/auth/domain/entities/login_entity.dart';
 
 abstract class AuthStates {}
 

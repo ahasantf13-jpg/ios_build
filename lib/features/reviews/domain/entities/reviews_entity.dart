@@ -1,5 +1,5 @@
-import 'package:glowguide/features/auth/domain/entities/login_entity.dart';
-import 'package:glowguide/features/clinics/domain/entities/clinic_entity.dart';
+import 'package:beautygm/features/auth/domain/entities/login_entity.dart';
+import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
 
 class ReviewsEntity {
   final String reviewID;

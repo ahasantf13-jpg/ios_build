@@ -1,10 +1,10 @@
-import 'package:glowguide/core/constants/app_assets.dart';
-import 'package:glowguide/core/constants/app_text_styles.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/auth/presentation/pages/user_registeration_page.dart';
-import 'package:glowguide/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:glowguide/features/auth/presentation/pages/clinic_owner_registeration_page.dart';
-import 'package:glowguide/features/auth/presentation/pages/sign_in_page.dart';
+import 'package:beautygm/core/constants/app_assets.dart';
+import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/auth/presentation/pages/user_registeration_page.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:beautygm/features/auth/presentation/pages/clinic_owner_registeration_page.dart';
+import 'package:beautygm/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +29,7 @@ class _ChooseRolePageState extends State<ChooseRolePage> {
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 50.h),
         child: Column(
           children: [
-            const Text("Welcome to GlowGuide  🎉",
+            const Text("Welcome to BeautyGM  🎉",
                 style: AppTextStyles.heading01SemiBold),
             const Text(
               "Enter your info to create new account",
@@ -91,7 +91,7 @@ class _ChooseRolePageState extends State<ChooseRolePage> {
                   child: GestureDetector(
                     onTap: () async {
                       final url = Uri.parse(
-                          'https://eng-hasantf.github.io/GlowGuidePrivacyAndPolicy/privacy.html');
+                          'https://ahasantf13-jpg.github.io/beautygm.privacypolicy.github.io/');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url,
                             mode: LaunchMode.externalApplication);

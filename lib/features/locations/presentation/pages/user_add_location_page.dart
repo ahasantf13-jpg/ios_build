@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:glowguide/core/params/params.dart';
-import 'package:glowguide/core/widgets/custom_input_field.dart';
-import 'package:glowguide/core/widgets/custom_scaffold_messenger.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_cubit.dart';
-import 'package:glowguide/features/locations/presentation/cubit/locations_states.dart';
+import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/widgets/custom_input_field.dart';
+import 'package:beautygm/core/widgets/custom_scaffold_messenger.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_cubit.dart';
+import 'package:beautygm/features/locations/presentation/cubit/locations_states.dart';
 
 class UserAddLocationPage extends StatefulWidget {
   const UserAddLocationPage({super.key});

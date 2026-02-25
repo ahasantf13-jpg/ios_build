@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:glowguide/core/errors/models/failure.dart';
-import 'package:glowguide/core/params/params.dart';
+import 'package:beautygm/core/errors/models/failure.dart';
+import 'package:beautygm/core/params/params.dart';
 
 abstract class DeleteAccountRepository {
   Future<Either<Failure, void>> deleteAccount(
