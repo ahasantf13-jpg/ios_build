@@ -9,4 +9,6 @@ abstract class AuthReposirory {
   Future<Either<Failure, void>> signUpClinicOwner({
     required SignupUserParams params,
   });
+
+  Future<Either<Failure, LoginEntity>> loginGuest();
 }

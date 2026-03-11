@@ -2,7 +2,7 @@ class AccountDetailsEntity {
   final String name;
   final String email;
   final String phoneNumber;
-  final bool gender;
+  final String gender;
   final String? birthday;
   final String? profilePic;
   final int approvedReviews;

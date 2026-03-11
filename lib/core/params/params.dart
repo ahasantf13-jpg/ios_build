@@ -210,3 +210,9 @@ class DeleteAccountParams {
 
   DeleteAccountParams({required this.email, required this.password});
 }
+
+class LoginGuestParams {
+  final String userType;
+
+  LoginGuestParams({required this.userType});
+}

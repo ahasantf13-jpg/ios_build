@@ -11,7 +11,6 @@ import 'package:beautygm/features/profile/presentation/cubit/account_details_cub
 import 'package:beautygm/features/reviews/presentation/cubit/reviews_clinic_i_d_cubit.dart';
 import 'package:beautygm/features/reviews/presentation/cubit/reviews_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,13 +18,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
 
-  await SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.immersiveSticky,
-  );
-
-  runApp(
-    MyApp(),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

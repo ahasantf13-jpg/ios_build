@@ -28,7 +28,7 @@ class AccountDetailsModel extends AccountDetailsEntity {
       profilePic: json['profile_picture'],
       phoneNumber: json['phone_number'] ?? "",
       birthday: json['date_of_birth'],
-      gender: json['is_male'],
+      gender: json['gender'] ?? "",
       businessName: json['business_name'] ?? "",
       approvedReviews: json["approved_review_count"] ?? 0,
       rejectedReviews: json["rejected_review_count"] ?? 0,

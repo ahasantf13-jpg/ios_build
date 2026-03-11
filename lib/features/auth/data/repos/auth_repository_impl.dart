@@ -53,4 +53,21 @@ class AuthRepositoryImpl extends AuthReposirory {
       return Left(Failure(errMessage: "No Internet Connection!"));
     }
   }
+
+  @override
+  Future<Either<Failure, LoginEntity>> loginGuest() async {
+    if (await networkInfo.isConnected) {
+      try {
+        final guestUser = await remoteDataSource.loginGuest();
+
+        return Right(guestUser);
+      } on AppException catch (e) {
+        return Left(Failure(errMessage: e.error.errorMessage));
+      } catch (_) {
+        return Left(Failure(errMessage: "Something went wrong!"));
+      }
+    } else {
+      return Left(Failure(errMessage: "No Internet Connection!"));
+    }
+  }
 }

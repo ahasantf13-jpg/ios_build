@@ -102,9 +102,13 @@ class _NewPasswordPageState extends State<NewPasswordPage> {
                 ElevatedButton(
                   onPressed: isLoading ? null : submit,
                   child: isLoading
-                      ? const CircularProgressIndicator(
-                          strokeWidth: 2,
-                          color: Colors.white,
+                      ? const SizedBox(
+                          height: 16,
+                          width: 16,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: Colors.white,
+                          ),
                         )
                       : const Text("Save"),
                 ),

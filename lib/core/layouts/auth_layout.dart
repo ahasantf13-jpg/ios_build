@@ -15,9 +15,9 @@ class AuthLayout extends StatelessWidget {
   final Widget? pageInNotConnected;
 
   Future<Map<String, dynamic>> _getInitialData() async {
-    final userType = await getIt<CacheHelper>().get<String>(ApiKey.type);
+    final userType = getIt<CacheHelper>().get<String>(ApiKey.type);
     final isSeenOnboarding =
-        await getIt<CacheHelper>().get<bool>("SeenOnboarding") ?? false;
+        getIt<CacheHelper>().get<bool>("SeenOnboarding") ?? false;
     return {
       'userType': userType,
       'isSeenOnboarding': isSeenOnboarding,
@@ -46,10 +46,13 @@ class AuthLayout extends StatelessWidget {
             case 'CO':
               return const OwnerTabsLayout();
             case 'U':
+            case 'G': // guests should see the normal user UI
               return const UserTabsLayout();
             case 'A':
               return const AdminPanel();
             default:
+              // unexpected type, fall back to login
+              debugPrint('AuthLayout: unknown userType "$userType"');
               return pageInNotConnected ?? const SignInPage();
           }
         }

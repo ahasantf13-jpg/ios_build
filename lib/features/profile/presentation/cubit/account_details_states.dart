@@ -2,27 +2,27 @@ import 'package:beautygm/features/profile/domain/entities/account_details_entity
 
 class AccountDetailsStates {}
 
-final class AccountDetailsInitial extends AccountDetailsStates {}
+class AccountDetailsInitial extends AccountDetailsStates {}
 
-final class GetAccountDetailsSuccessfully extends AccountDetailsStates {
-  final AccountDetailsEntity accountDetails;
+class GetAccountDetailsSuccessfully extends AccountDetailsStates {
+  AccountDetailsEntity accountDetails;
 
   GetAccountDetailsSuccessfully({required this.accountDetails});
 }
 
-final class GetAccountDetailsLoading extends AccountDetailsStates {}
+class GetAccountDetailsLoading extends AccountDetailsStates {}
 
-final class GetAccountDetailsFailure extends AccountDetailsStates {
+class GetAccountDetailsFailure extends AccountDetailsStates {
   final String errMessage;
 
   GetAccountDetailsFailure({required this.errMessage});
 }
 
-final class UpdateProfileLoading extends AccountDetailsStates {}
+class UpdateProfileLoading extends AccountDetailsStates {}
 
-final class UpdateProfileSuccessfully extends AccountDetailsStates {}
+class UpdateProfileSuccessfully extends AccountDetailsStates {}
 
-final class UpdateProfileFailed extends AccountDetailsStates {
+class UpdateProfileFailed extends AccountDetailsStates {
   final String errMessage;
 
   UpdateProfileFailed({required this.errMessage});

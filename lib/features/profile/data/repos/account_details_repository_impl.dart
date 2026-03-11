@@ -30,9 +30,11 @@ class AccountDetailsRepositoryImpl extends AccountDetailsRepository {
         return Right(remoteAccountDetails);
       } on AppException catch (e) {
         return Left(Failure(errMessage: e.error.errorMessage));
-      } catch (_) {
-        return Left(Failure(errMessage: "Something went wrong!"));
       }
+      //  catch (e) {
+      // print(e);
+      // return Left(Failure(errMessage: "Something went wrong!"));
+      // }
     } else {
       try {
         final localAccountDetails =

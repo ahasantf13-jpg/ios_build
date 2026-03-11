@@ -20,9 +20,18 @@ class CurrentClinicSubTab extends StatelessWidget {
 
         if (state is GetClinicsFailed) {
           return Center(
-            child: Text(
-              "Failed to load clinics\n${state.errMessage}",
-              textAlign: TextAlign.center,
+            child: RefreshIndicator(
+              onRefresh: () async =>
+                  context.read<ClinicsCubit>().getAllClinics(),
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  Text(
+                    "Failed to load clinics\n${state.errMessage}",
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
           );
         }

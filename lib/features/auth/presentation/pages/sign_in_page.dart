@@ -63,6 +63,7 @@ class _SignInPageState extends State<SignInPage> {
       listener: (context, state) {
         if (state is LoginUserSuccessfully) {
           CustomScaffoldMessenger().showSuccess("Logged In Successfully!");
+
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => const AuthLayout()),
@@ -218,16 +219,8 @@ class _SignInPageState extends State<SignInPage> {
                                   )
                                 : const Text("Login"),
                           ),
-                          // SizedBox(height: 15.h),
-                          // Align(
-                          //   alignment: Alignment.center,
-                          //   child: Text(
-                          //     "OR CONTINUE WITH",
-                          //     style: AppTextStyles.captionSemiBold.copyWith(
-                          //       color: const Color(0xFF78808B),
-                          //     ),
-                          //   ),
-                          // ),
+                          SizedBox(height: 15.h),
+
                           // SizedBox(height: 15.h),
                           // SocialBottons(
                           //   googleAuth: () async {
@@ -248,6 +241,25 @@ class _SignInPageState extends State<SignInPage> {
                           //   appleAuth: () {},
                           //   facebookAuth: () {},
                           // ),
+                          SizedBox(height: 15.h),
+
+                          Align(
+                            alignment: Alignment.center,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await context
+                                    .read<AuthCubit>()
+                                    .loginGuestUser();
+                              },
+                              child: Text(
+                                "Or continue as Guest",
+                                style: AppTextStyles.paragraph02SemiBold
+                                    .copyWith(
+                                        color: const Color.fromARGB(
+                                            255, 69, 72, 218)),
+                              ),
+                            ),
+                          ),
                           SizedBox(height: 15.h),
                           Align(
                             alignment: Alignment.center,

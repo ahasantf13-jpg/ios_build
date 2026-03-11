@@ -1,3 +1,5 @@
+import 'package:beautygm/features/locations/presentation/cubit/locations_cubit.dart';
+import 'package:beautygm/features/profile/presentation/cubit/account_details_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beautygm/core/constants/app_assets.dart';
 import 'package:beautygm/core/constants/app_colors.dart';
@@ -51,6 +53,13 @@ class _UserHomeTabState extends State<UserHomeTab> {
             }
             if (context.mounted) {
               futures.add(context.read<ReviewsCubit>().getAllReviews());
+            }
+            if (context.mounted) {
+              futures.add(
+                  context.read<AccountDetailsCubit>().fetchAccountDetails());
+            }
+            if (context.mounted) {
+              futures.add(context.read<LocationsCubit>().getAllLocations());
             }
             await Future.wait(futures);
           },

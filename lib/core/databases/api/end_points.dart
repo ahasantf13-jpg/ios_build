@@ -4,6 +4,8 @@ class EndPoints {
 
   static const String accountDetails = "user/profile/";
   static const String login = "user/login/";
+  static const String logout = "user/logout/";
+  static const String loginAsGuest = "user/login/guest/";
   static const String signupUser = "user/signup/";
   static const String google = "user/google/";
 

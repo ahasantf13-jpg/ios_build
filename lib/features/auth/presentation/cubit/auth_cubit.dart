@@ -6,6 +6,7 @@ import 'package:beautygm/core/params/params.dart';
 import 'package:beautygm/core/services/service_locator.dart';
 import 'package:beautygm/features/auth/data/repos/auth_repository_impl.dart';
 import 'package:beautygm/features/auth/data/source/auth_remote_data_source.dart';
+import 'package:beautygm/features/auth/domain/usecases/login_guest_usecase.dart';
 import 'package:beautygm/features/auth/domain/usecases/login_user_usecase.dart';
 import 'package:beautygm/features/auth/domain/usecases/sign_up_clinic_owner_usecase.dart';
 import 'package:beautygm/features/auth/presentation/cubit/auth_states.dart';
@@ -80,6 +81,54 @@ class AuthCubit extends Cubit<AuthStates> {
         emit(SignupUserSuccess());
       },
     );
+  }
+
+  Future<void> loginGuestUser() async {
+    emit(LoginUserLoading());
+
+    final result = await LoginGuestUsecase(
+            authReposirory: AuthRepositoryImpl(
+                networkInfo: getIt<NetworkInfo>(),
+                remoteDataSource: getIt<AuthRemoteDataSource>()))
+        .call();
+
+    result.fold(
+        (failure) => emit(LoginUserFailed(errMessage: failure.errMessage)),
+        (guest) async {
+      await getIt<CacheHelper>().save(
+        ApiKey.access,
+        guest.access,
+      );
+
+      await getIt<CacheHelper>().save(
+        ApiKey.refresh,
+        guest.refresh,
+      );
+
+      await getIt<CacheHelper>().save(
+        ApiKey.type,
+        guest.user.type,
+      );
+
+      await getIt<CacheHelper>().save(
+        ApiKey.userID,
+        guest.user.id,
+      );
+
+      await getIt<CacheHelper>().save(
+        ApiKey.userFullName,
+        guest.user.fullName,
+      );
+
+      if (guest.user.profilePic != null) {
+        await getIt<CacheHelper>().save(
+          ApiKey.userProfileImage,
+          guest.user.profilePic!,
+        );
+      }
+
+      emit(LoginUserSuccessfully(user: guest));
+    });
   }
 
   void logout() async {

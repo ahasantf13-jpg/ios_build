@@ -18,6 +18,13 @@ class AuthRemoteDataSource {
     return LoginModel.fromJson(response);
   }
 
+  Future<LoginModel> loginGuest() async {
+    final response =
+        await api.post(EndPoints.loginAsGuest, data: {"type": "G"});
+
+    return LoginModel.fromJson(response);
+  }
+
   Future<void> signupUser(SignupUserParams params) async {
     final Map<String, dynamic> data = {
       "fullname": params.fullName,
