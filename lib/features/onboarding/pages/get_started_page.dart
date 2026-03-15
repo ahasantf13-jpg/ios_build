@@ -1,9 +1,12 @@
 import 'package:beautygm/core/constants/app_assets.dart';
 import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/layouts/auth_layout.dart';
+import 'package:beautygm/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:beautygm/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:beautygm/features/auth/presentation/pages/choose_role_page.dart';
 import 'package:beautygm/features/onboarding/widgets/or_divider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GetStartedPage extends StatefulWidget {
@@ -200,6 +203,29 @@ class _GetStartedPageState extends State<GetStartedPage>
                             backgroundColor: const Color(0xFFF8CF2C),
                           ),
                           child: const Text("Register"),
+                        ),
+                        SizedBox(height: 16.h),
+                        GestureDetector(
+                          onTap: () async {
+                            await context.read<AuthCubit>().loginGuestUser();
+                            if (context.mounted) {
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const AuthLayout(),
+                                ),
+                                (route) => false,
+                              );
+                            }
+                          },
+                          child: Text(
+                            "Continue as a guest",
+                            style: AppTextStyles.paragraph02SemiBold.copyWith(
+                              color: const Color(0xFF7CAC8E),
+                              decoration: TextDecoration.underline,
+                              decorationColor: const Color(0xFF7CAC8E),
+                            ),
+                          ),
                         ),
                       ],
                     ),

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/services/service_locator.dart';
+import 'package:beautygm/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:beautygm/features/profile/presentation/pages/my_profile_tab.dart';
 import 'package:beautygm/features/user/presentation/pages/user_favorites_tab.dart';
 import 'package:beautygm/features/user/presentation/pages/user_home_tab.dart';
@@ -23,10 +27,69 @@ class _UserTabsLayoutState extends State<UserTabsLayout> {
     MyProfileTab(),
   ];
 
+  bool get _isGuest {
+    final userType = getIt<CacheHelper>().get<String>(ApiKey.type);
+    return userType == 'G';
+  }
+
   void _onItemTapped(int index) {
+    // Block guests from accessing the Profile tab (index 3)
+    if (index == 3 && _isGuest) {
+      _showGuestDialog();
+      return;
+    }
     if (_selectedIndex != index) {
       setState(() => _selectedIndex = index);
     }
+  }
+
+  void _showGuestDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        title: const Text(
+          "Create an Account",
+          style: AppTextStyles.paragraph01Regular,
+        ),
+        content: Text(
+          "You need to register first to access your profile.",
+          style: AppTextStyles.paragraph02Regular.copyWith(
+            color: const Color(0xFF393E46),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              "Not Now",
+              style: AppTextStyles.paragraph02SemiBold.copyWith(
+                color: const Color(0xFF78808B),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              await getIt<CacheHelper>().clear();
+
+              if (context.mounted) {
+                Navigator.pop(context);
+              }
+
+              if (context.mounted) {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SignInPage()),
+                );
+              }
+            },
+            child: const Text("Sign In / Register"),
+          ),
+        ],
+      ),
+    );
   }
 
   @override

@@ -143,9 +143,12 @@ class _MyProfileTabState extends State<MyProfileTab> {
             ),
           );
         }),
-        _profileOption(context, Icons.shield_outlined, "Change Password", () {
-          _changePassword(context);
-        }),
+        userType == "G"
+            ? const SizedBox.shrink()
+            : _profileOption(context, Icons.shield_outlined, "Change Password",
+                () {
+                _changePassword(context);
+              }),
         userType == "CO"
             ? const SizedBox()
             : _profileOption(context, Icons.map_outlined, "Addresses", () {
@@ -506,6 +509,7 @@ class _MyProfileTabState extends State<MyProfileTab> {
   Row _welcomingText() {
     final userFullName = getIt<CacheHelper>().get(ApiKey.userFullName);
     final profileImage = getIt<CacheHelper>().get(ApiKey.userProfileImage);
+    final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
 
     return Row(
       children: [
@@ -521,7 +525,7 @@ class _MyProfileTabState extends State<MyProfileTab> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hello, $userFullName 👋🏻",
+                "Hello,${userIsGuest == "G" ? " Guest" : userFullName}   👋🏻",
                 style: AppTextStyles.paragraph01SemiBold,
               ),
               const Text(

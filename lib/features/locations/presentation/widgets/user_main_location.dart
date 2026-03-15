@@ -1,5 +1,8 @@
 import 'package:beautygm/core/constants/app_colors.dart';
 import 'package:beautygm/core/constants/app_text_styles.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
+import 'package:beautygm/core/services/service_locator.dart';
 import 'package:beautygm/features/locations/data/models/locations_model.dart';
 import 'package:beautygm/features/locations/presentation/cubit/locations_cubit.dart';
 import 'package:beautygm/features/locations/presentation/cubit/locations_states.dart';
@@ -50,35 +53,41 @@ class UserMainLocation extends StatelessWidget {
     );
   }
 
-  Padding _buildUI(BuildContext context, String location) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Icon(Icons.location_on, size: 25.r, color: AppColors.primary05),
-          SizedBox(width: 4.w),
-          Expanded(
-            child: Text(
-              location,
-              maxLines: 1,
-              style: AppTextStyles.paragraph02Regular,
+  Widget _buildUI(BuildContext context, String location) {
+    final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
+
+    if (userIsGuest == "G") {
+      return const SizedBox.shrink();
+    } else {
+      return Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Icon(Icons.location_on, size: 25.r, color: AppColors.primary05),
+            SizedBox(width: 4.w),
+            Expanded(
+              child: Text(
+                location,
+                maxLines: 1,
+                style: AppTextStyles.paragraph02Regular,
+              ),
             ),
-          ),
-          SizedBox(width: 4.w),
-          GestureDetector(
-            onTap: () {
-              showLocationBottomSheet(context);
-            },
-            child: Icon(
-              Icons.keyboard_arrow_down,
-              size: 25.r,
-              color: AppColors.primary05,
+            SizedBox(width: 4.w),
+            GestureDetector(
+              onTap: () {
+                showLocationBottomSheet(context);
+              },
+              child: Icon(
+                Icons.keyboard_arrow_down,
+                size: 25.r,
+                color: AppColors.primary05,
+              ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
+    }
   }
 }

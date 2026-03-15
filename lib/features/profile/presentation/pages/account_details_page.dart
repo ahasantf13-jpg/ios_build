@@ -48,6 +48,7 @@ class AccountDetailsPage extends StatelessWidget {
 
         if (state is GetAccountDetailsSuccessfully) {
           final user = state.accountDetails;
+          final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
 
           return Scaffold(
             appBar: _appBar(context),
@@ -68,27 +69,30 @@ class AccountDetailsPage extends StatelessWidget {
                     SizedBox(
                       height: 64.h,
                     ),
-                    ElevatedButton.icon(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => BlocProvider(
-                                      create: (context) => DeleteAccountCubit(),
-                                      child: const DeleteAccountPage(),
-                                    )));
-                      },
-                      icon: const Icon(Icons.delete),
-                      label: const Text("Delete Account"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 14, horizontal: 24),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                    )
+                    userIsGuest == "G"
+                        ? const SizedBox.shrink()
+                        : ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BlocProvider(
+                                            create: (context) =>
+                                                DeleteAccountCubit(),
+                                            child: const DeleteAccountPage(),
+                                          )));
+                            },
+                            icon: const Icon(Icons.delete),
+                            label: const Text("Delete Account"),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 14, horizontal: 24),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                          )
                   ],
                 ),
               ),
@@ -103,6 +107,7 @@ class AccountDetailsPage extends StatelessWidget {
 
   Container _profileInfo(BuildContext context, AccountDetailsEntity user) {
     final userLocation = getIt<CacheHelper>().get(ApiKey.mainLocation);
+    final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
 
     return Container(
       padding: EdgeInsets.all(16.w),
@@ -117,7 +122,8 @@ class AccountDetailsPage extends StatelessWidget {
           SizedBox(height: 16.h),
           _infoOption(context, Icons.person, user.name),
           SizedBox(height: 16.h),
-          _infoOption(context, Icons.mail, user.email),
+          _infoOption(
+              context, Icons.mail, userIsGuest == "G" ? "Guest" : user.email),
           SizedBox(height: 16.h),
           _infoOption(
             context,
@@ -164,6 +170,7 @@ class AccountDetailsPage extends StatelessWidget {
 
   Container _userDetails(AccountDetailsEntity user) {
     final profileImage = getIt<CacheHelper>().get(ApiKey.userProfileImage);
+    final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
 
     return Container(
       padding: EdgeInsets.all(16.w),
@@ -186,7 +193,8 @@ class AccountDetailsPage extends StatelessWidget {
               children: [
                 Text(user.name, style: AppTextStyles.paragraph01SemiBold),
                 SizedBox(height: 12.h),
-                Text(user.email, style: AppTextStyles.paragraph02Regular),
+                Text(userIsGuest == "G" ? "Guest" : user.email,
+                    style: AppTextStyles.paragraph02Regular),
               ],
             ),
           ),
@@ -196,6 +204,8 @@ class AccountDetailsPage extends StatelessWidget {
   }
 
   AppBar _appBar(BuildContext context) {
+    final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
+
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -204,6 +214,12 @@ class AccountDetailsPage extends StatelessWidget {
       actions: [
         GestureDetector(
           onTap: () {
+            if (userIsGuest == "G") {
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text("You need to create account first..")));
+
+              return;
+            }
             Navigator.push(
               context,
               PageRouteBuilder(

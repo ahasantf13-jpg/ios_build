@@ -1,8 +1,11 @@
 import 'package:beautygm/core/connections/network_info.dart';
+import 'package:beautygm/core/databases/api/end_points.dart';
+import 'package:beautygm/core/databases/cache/cache_helper.dart';
 import 'package:beautygm/core/errors/exceptions/app_exceptions.dart';
 import 'package:beautygm/core/errors/exceptions/cache_exceptions.dart';
 import 'package:beautygm/core/errors/models/failure.dart';
 import 'package:beautygm/core/params/params.dart';
+import 'package:beautygm/core/services/service_locator.dart';
 import 'package:beautygm/features/clinics/domain/entities/clinic_entity.dart';
 import 'package:beautygm/features/reviews/data/models/reviews_model.dart';
 import 'package:beautygm/features/reviews/data/source/reviews_local_data_source.dart';
@@ -12,6 +15,8 @@ import 'package:beautygm/features/reviews/domain/repos/reviews_repository.dart';
 import 'package:dartz/dartz.dart';
 
 class ReviewsRepositoryImpl extends ReviewsRepository {
+  final String userIsGuest = getIt<CacheHelper>().get(ApiKey.type);
+
   final NetworkInfo networkInfo;
   final ReviewsRemoteDataSource remoteDataSource;
   final ReviewsLocalDataSource localDataSource;
@@ -28,6 +33,9 @@ class ReviewsRepositoryImpl extends ReviewsRepository {
   }) async {
     if (await networkInfo.isConnected) {
       try {
+        if (userIsGuest == "G") {
+          return Left(Failure(errMessage: "You must create account first!"));
+        }
         final writeReview = await remoteDataSource.writeReview(params);
         return Right(writeReview);
       } on AppException catch (e) {
